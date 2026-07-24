@@ -9071,3 +9071,5 @@ stats:{
 trait:"좌완에이스",
 legendAvailable:true
 }
+
+];
