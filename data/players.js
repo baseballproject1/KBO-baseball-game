@@ -1,0 +1,9073 @@
+const LG_PLAYERS = [
+
+{
+id:1,
+name:"홍창기",
+team:"LG",
+position:"외야수",
+type:"batter",
+grade:"시그니처",
+stats:{
+ power:84,
+ contact:95,
+ speed:92,
+ defense:94,
+ eye:97
+},
+trait:"정교한타격",
+legendAvailable:true
+},
+
+{
+id:2,
+name:"오스틴",
+team:"LG",
+position:"1루수",
+type:"batter",
+grade:"골든글러브",
+stats:{
+ power:92,
+ contact:86,
+ speed:70,
+ defense:82,
+ eye:85
+},
+trait:"거포본능",
+legendAvailable:false
+},
+
+{
+id:3,
+name:"김현수",
+team:"LG",
+position:"외야수",
+type:"batter",
+grade:"시그니처",
+stats:{
+ power:92,
+ contact:97,
+ speed:70,
+ defense:90,
+ eye:95
+},
+trait:"클러치히터",
+legendAvailable:true
+},
+
+{
+id:4,
+name:"문보경",
+team:"LG",
+position:"3루수",
+type:"batter",
+grade:"S",
+stats:{
+ power:82,
+ contact:84,
+ speed:72,
+ defense:82,
+ eye:78
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:5,
+name:"박동원",
+team:"LG",
+position:"포수",
+type:"batter",
+grade:"골든글러브",
+stats:{
+ power:90,
+ contact:82,
+ speed:55,
+ defense:92,
+ eye:80
+},
+trait:"포수리더",
+legendAvailable:false
+},
+
+{
+id:6,
+name:"박해민",
+team:"LG",
+position:"외야수",
+type:"batter",
+grade:"골든글러브",
+stats:{
+ power:70,
+ contact:86,
+ speed:97,
+ defense:99,
+ eye:85
+},
+trait:"빠른발",
+legendAvailable:false
+},
+
+{
+id:7,
+name:"신민재",
+team:"LG",
+position:"2루수",
+type:"batter",
+grade:"A",
+stats:{
+ power:50,
+ contact:70,
+ speed:88,
+ defense:80,
+ eye:65
+},
+trait:"도루",
+legendAvailable:false
+},
+
+{
+id:8,
+name:"오지환",
+team:"LG",
+position:"유격수",
+type:"batter",
+grade:"시그니처",
+stats:{
+ power:94,
+ contact:92,
+ speed:90,
+ defense:99,
+ eye:90
+},
+trait:"수비의달인",
+legendAvailable:true
+},
+
+{
+id:9,
+name:"임찬규",
+team:"LG",
+position:"선발투수",
+type:"pitcher",
+grade:"S",
+stats:{
+ velocity:80,
+ control:86,
+ change:84,
+ stamina:86,
+ defense:72
+},
+trait:"위기관리",
+legendAvailable:false
+},
+
+{
+id:10,
+name:"정우영",
+team:"LG",
+position:"불펜투수",
+type:"pitcher",
+grade:"골든글러브",
+stats:{
+ velocity:90,
+ control:88,
+ change:94,
+ stamina:82,
+ defense:75
+},
+trait:"필승조",
+legendAvailable:false
+},
+
+{
+id:11,
+name:"고우석",
+team:"LG",
+position:"마무리투수",
+type:"pitcher",
+grade:"시그니처",
+stats:{
+ velocity:99,
+ control:92,
+ change:94,
+ stamina:82,
+ defense:80
+},
+trait:"철벽마무리",
+legendAvailable:true
+},
+
+{
+id:12,
+name:"최원태",
+team:"LG",
+position:"선발투수",
+type:"pitcher",
+grade:"S",
+stats:{
+ velocity:85,
+ control:86,
+ change:88,
+ stamina:90,
+ defense:72
+},
+trait:"안정감",
+legendAvailable:false
+},
+
+{
+id:13,
+name:"김진성",
+team:"LG",
+position:"불펜투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:78,
+ control:84,
+ change:82,
+ stamina:70,
+ defense:72
+},
+trait:"베테랑",
+legendAvailable:false
+},
+
+{
+id:14,
+name:"문성주",
+team:"LG",
+position:"외야수",
+type:"batter",
+grade:"S",
+stats:{
+ power:65,
+ contact:82,
+ speed:84,
+ defense:80,
+ eye:76
+},
+trait:"정교한타격",
+legendAvailable:false
+},
+
+{
+id:15,
+name:"김범석",
+team:"LG",
+position:"포수",
+type:"batter",
+grade:"A",
+stats:{
+ power:72,
+ contact:65,
+ speed:45,
+ defense:68,
+ eye:62
+},
+trait:"거포포수",
+legendAvailable:false
+},
+
+{
+id:16,
+name:"허도환",
+team:"LG",
+position:"포수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:60,
+ speed:35,
+ defense:70,
+ eye:60
+},
+trait:"포수리더",
+legendAvailable:false
+},
+
+{
+id:17,
+name:"김기연",
+team:"LG",
+position:"포수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:50,
+ contact:60,
+ speed:40,
+ defense:65,
+ eye:58
+},
+trait:"수비형포수",
+legendAvailable:false
+},
+
+{
+id:18,
+name:"김유영",
+team:"LG",
+position:"투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:80,
+ control:76,
+ change:75,
+ stamina:72,
+ defense:68
+},
+trait:"좌완특화",
+legendAvailable:false
+},
+
+{
+id:19,
+name:"유영찬",
+team:"LG",
+position:"불펜투수",
+type:"pitcher",
+grade:"S",
+stats:{
+ velocity:86,
+ control:82,
+ change:86,
+ stamina:76,
+ defense:70
+},
+trait:"강심장",
+legendAvailable:false
+},
+
+{
+id:20,
+name:"박명근",
+team:"LG",
+position:"불펜투수",
+type:"pitcher",
+grade:"S",
+stats:{
+ velocity:86,
+ control:82,
+ change:82,
+ stamina:76,
+ defense:72
+},
+trait:"위기관리",
+legendAvailable:false
+},
+
+{
+id:21,
+name:"손주영",
+team:"LG",
+position:"선발투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:80,
+ control:78,
+ change:80,
+ stamina:82,
+ defense:68
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:22,
+name:"강효종",
+team:"LG",
+position:"선발투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:75,
+ control:70,
+ change:70,
+ stamina:75,
+ defense:65
+},
+trait:"유망주",
+legendAvailable:false
+},
+
+{
+id:23,
+name:"이우찬",
+team:"LG",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:72,
+ control:68,
+ change:70,
+ stamina:70,
+ defense:65
+},
+trait:"제구형",
+legendAvailable:false
+},
+
+{
+id:24,
+name:"구본혁",
+team:"LG",
+position:"내야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:55,
+ contact:68,
+ speed:72,
+ defense:78,
+ eye:65
+},
+trait:"수비력",
+legendAvailable:false
+},
+
+{
+id:25,
+name:"김주성",
+team:"LG",
+position:"내야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:50,
+ contact:62,
+ speed:65,
+ defense:72,
+ eye:60
+},
+trait:"멀티포지션",
+legendAvailable:false
+}
+
+];// =========================
+// LG 트윈스 선수 26~50명
+// =========================
+
+{
+id:26,
+name:"최승민",
+team:"LG",
+position:"외야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:60,
+ speed:80,
+ defense:75,
+ eye:55
+},
+trait:"대주자",
+legendAvailable:false
+},
+
+{
+id:27,
+name:"송찬의",
+team:"LG",
+position:"내야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:65,
+ contact:70,
+ speed:70,
+ defense:72,
+ eye:68
+},
+trait:"멀티포지션",
+legendAvailable:false
+},
+
+{
+id:28,
+name:"이재원",
+team:"LG",
+position:"외야수",
+type:"batter",
+grade:"S",
+stats:{
+ power:80,
+ contact:72,
+ speed:65,
+ defense:72,
+ eye:70
+},
+trait:"거포본능",
+legendAvailable:false
+},
+
+{
+id:29,
+name:"정주현",
+team:"LG",
+position:"2루수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:60,
+ speed:70,
+ defense:75,
+ eye:55
+},
+trait:"수비형",
+legendAvailable:false
+},
+
+{
+id:30,
+name:"이주형",
+team:"LG",
+position:"내야수",
+type:"batter",
+grade:"S",
+stats:{
+ power:68,
+ contact:78,
+ speed:88,
+ defense:82,
+ eye:76
+},
+trait:"빠른발",
+legendAvailable:false
+},
+
+{
+id:31,
+name:"장준원",
+team:"LG",
+position:"내야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:50,
+ contact:60,
+ speed:65,
+ defense:70,
+ eye:55
+},
+trait:"수비형",
+legendAvailable:false
+},
+
+{
+id:32,
+name:"한석현",
+team:"LG",
+position:"외야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:65,
+ speed:78,
+ defense:70,
+ eye:60
+},
+trait:"주루",
+legendAvailable:false
+},
+
+{
+id:33,
+name:"전준호",
+team:"LG",
+position:"외야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:55,
+ contact:70,
+ speed:84,
+ defense:78,
+ eye:65
+},
+trait:"빠른발",
+legendAvailable:false
+},
+
+{
+id:34,
+name:"김성우",
+team:"LG",
+position:"포수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:50,
+ contact:58,
+ speed:38,
+ defense:65,
+ eye:55
+},
+trait:"포수유망주",
+legendAvailable:false
+},
+
+{
+id:35,
+name:"이상영",
+team:"LG",
+position:"투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:78,
+ control:76,
+ change:75,
+ stamina:75,
+ defense:68
+},
+trait:"좌완투수",
+legendAvailable:false
+},
+
+{
+id:36,
+name:"김대현",
+team:"LG",
+position:"투수",
+type:"pitcher",
+grade:"S",
+stats:{
+ velocity:84,
+ control:82,
+ change:82,
+ stamina:80,
+ defense:72
+},
+trait:"강속구",
+legendAvailable:false
+},
+
+{
+id:37,
+name:"성동현",
+team:"LG",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:73,
+ control:70,
+ change:70,
+ stamina:68,
+ defense:62
+},
+trait:"불펜형",
+legendAvailable:false
+},
+
+{
+id:38,
+name:"이종준",
+team:"LG",
+position:"투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:80,
+ control:74,
+ change:76,
+ stamina:75,
+ defense:68
+},
+trait:"강속구",
+legendAvailable:false
+},
+
+{
+id:39,
+name:"김영준",
+team:"LG",
+position:"선발투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:74,
+ control:72,
+ change:70,
+ stamina:75,
+ defense:65
+},
+trait:"선발형",
+legendAvailable:false
+},
+
+{
+id:40,
+name:"이상규",
+team:"LG",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:72,
+ control:70,
+ change:68,
+ stamina:70,
+ defense:64
+},
+trait:"제구형",
+legendAvailable:false
+},
+
+{
+id:41,
+name:"박관우",
+team:"LG",
+position:"외야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:60,
+ speed:70,
+ defense:65,
+ eye:58
+},
+trait:"주루",
+legendAvailable:false
+},
+
+{
+id:42,
+name:"최원영",
+team:"LG",
+position:"외야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:55,
+ contact:68,
+ speed:78,
+ defense:74,
+ eye:65
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:43,
+name:"허용주",
+team:"LG",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:72,
+ control:66,
+ change:68,
+ stamina:70,
+ defense:60
+},
+trait:"강속구",
+legendAvailable:false
+},
+
+{
+id:44,
+name:"김태우",
+team:"LG",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:70,
+ control:68,
+ change:65,
+ stamina:68,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:45,
+name:"박지훈",
+team:"LG",
+position:"내야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:58,
+ speed:65,
+ defense:65,
+ eye:55
+},
+trait:"수비형",
+legendAvailable:false
+},
+
+{
+id:46,
+name:"이주헌",
+team:"LG",
+position:"포수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:55,
+ speed:35,
+ defense:62,
+ eye:50
+},
+trait:"수비형포수",
+legendAvailable:false
+},
+
+{
+id:47,
+name:"김주완",
+team:"LG",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:72,
+ control:68,
+ change:70,
+ stamina:70,
+ defense:65
+},
+trait:"제구형",
+legendAvailable:false
+},
+
+{
+id:48,
+name:"윤호솔",
+team:"LG",
+position:"투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:82,
+ control:75,
+ change:78,
+ stamina:75,
+ defense:68
+},
+trait:"강속구",
+legendAvailable:false
+},
+
+{
+id:49,
+name:"김진수",
+team:"LG",
+position:"내야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:48,
+ contact:60,
+ speed:68,
+ defense:70,
+ eye:58
+},
+trait:"수비형",
+legendAvailable:false
+},
+
+{
+id:50,
+name:"최남호",
+team:"LG",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:71,
+ control:67,
+ change:69,
+ stamina:68,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+  }const SSG_PLAYERS = [
+
+{
+id:1,
+name:"최정",
+team:"SSG",
+position:"3루수",
+type:"batter",
+grade:"시그니처",
+stats:{
+ power:98,
+ contact:92,
+ speed:72,
+ defense:90,
+ eye:94
+},
+trait:"홈런왕",
+legendAvailable:true
+},
+
+{
+id:2,
+name:"김광현",
+team:"SSG",
+position:"선발투수",
+type:"pitcher",
+grade:"시그니처",
+stats:{
+ velocity:92,
+ control:94,
+ change:95,
+ stamina:96,
+ defense:80
+},
+trait:"에이스",
+legendAvailable:true
+},
+
+{
+id:3,
+name:"한유섬",
+team:"SSG",
+position:"외야수",
+type:"batter",
+grade:"골든글러브",
+stats:{
+ power:90,
+ contact:82,
+ speed:65,
+ defense:78,
+ eye:84
+},
+trait:"장타력",
+legendAvailable:false
+},
+
+{
+id:4,
+name:"박성한",
+team:"SSG",
+position:"유격수",
+type:"batter",
+grade:"골든글러브",
+stats:{
+ power:72,
+ contact:88,
+ speed:78,
+ defense:92,
+ eye:82
+},
+trait:"수비의달인",
+legendAvailable:false
+},
+
+{
+id:5,
+name:"노경은",
+team:"SSG",
+position:"불펜투수",
+type:"pitcher",
+grade:"S",
+stats:{
+ velocity:82,
+ control:88,
+ change:85,
+ stamina:86,
+ defense:75
+},
+trait:"베테랑",
+legendAvailable:false
+},
+
+{
+id:6,
+name:"문승원",
+team:"SSG",
+position:"선발투수",
+type:"pitcher",
+grade:"S",
+stats:{
+ velocity:84,
+ control:86,
+ change:84,
+ stamina:88,
+ defense:72
+},
+trait:"안정감",
+legendAvailable:false
+},
+
+{
+id:7,
+name:"서진용",
+team:"SSG",
+position:"마무리투수",
+type:"pitcher",
+grade:"골든글러브",
+stats:{
+ velocity:88,
+ control:90,
+ change:86,
+ stamina:80,
+ defense:75
+},
+trait:"철벽마무리",
+legendAvailable:false
+},
+
+{
+id:8,
+name:"고효준",
+team:"SSG",
+position:"불펜투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:78,
+ control:82,
+ change:80,
+ stamina:70,
+ defense:68
+},
+trait:"좌완특화",
+legendAvailable:false
+},
+
+{
+id:9,
+name:"오태곤",
+team:"SSG",
+position:"내외야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:65,
+ contact:68,
+ speed:78,
+ defense:75,
+ eye:65
+},
+trait:"멀티포지션",
+legendAvailable:false
+},
+
+{
+id:10,
+name:"최지훈",
+team:"SSG",
+position:"외야수",
+type:"batter",
+grade:"S",
+stats:{
+ power:62,
+ contact:80,
+ speed:90,
+ defense:88,
+ eye:75
+},
+trait:"빠른발",
+legendAvailable:false
+},
+
+{
+id:11,
+name:"추신수",
+team:"SSG",
+position:"외야수",
+type:"batter",
+grade:"시그니처",
+stats:{
+ power:88,
+ contact:94,
+ speed:80,
+ defense:82,
+ eye:96
+},
+trait:"선구안",
+legendAvailable:true
+},
+
+{
+id:12,
+name:"이숭용",
+team:"SSG",
+position:"1루수",
+type:"batter",
+grade:"레전드",
+stats:{
+ power:90,
+ contact:90,
+ speed:60,
+ defense:85,
+ eye:88
+},
+trait:"클러치",
+legendAvailable:false
+},
+
+{
+id:13,
+name:"이진영",
+team:"SSG",
+position:"외야수",
+type:"batter",
+grade:"골든글러브",
+stats:{
+ power:78,
+ contact:85,
+ speed:75,
+ defense:86,
+ eye:82
+},
+trait:"수비형",
+legendAvailable:false
+},
+
+{
+id:14,
+name:"김성현",
+team:"SSG",
+position:"2루수",
+type:"batter",
+grade:"S",
+stats:{
+ power:60,
+ contact:78,
+ speed:70,
+ defense:82,
+ eye:72
+},
+trait:"꾸준함",
+legendAvailable:false
+},
+
+{
+id:15,
+name:"최주환",
+team:"SSG",
+position:"2루수",
+type:"batter",
+grade:"S",
+stats:{
+ power:82,
+ contact:84,
+ speed:65,
+ defense:72,
+ eye:80
+},
+trait:"장타력",
+legendAvailable:false
+},
+
+{
+id:16,
+name:"전의산",
+team:"SSG",
+position:"1루수",
+type:"batter",
+grade:"A",
+stats:{
+ power:75,
+ contact:65,
+ speed:50,
+ defense:65,
+ eye:60
+},
+trait:"거포본능",
+legendAvailable:false
+},
+
+{
+id:17,
+name:"이지영",
+team:"SSG",
+position:"포수",
+type:"batter",
+grade:"A",
+stats:{
+ power:45,
+ contact:72,
+ speed:40,
+ defense:80,
+ eye:70
+},
+trait:"포수리더",
+legendAvailable:false
+},
+
+{
+id:18,
+name:"김민식",
+team:"SSG",
+position:"포수",
+type:"batter",
+grade:"S",
+stats:{
+ power:55,
+ contact:70,
+ speed:40,
+ defense:85,
+ eye:68
+},
+trait:"수비형포수",
+legendAvailable:false
+},
+
+{
+id:19,
+name:"박종훈",
+team:"SSG",
+position:"선발투수",
+type:"pitcher",
+grade:"S",
+stats:{
+ velocity:76,
+ control:88,
+ change:92,
+ stamina:85,
+ defense:72
+},
+trait:"변화구",
+legendAvailable:false
+},
+
+{
+id:20,
+name:"오원석",
+team:"SSG",
+position:"선발투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:82,
+ control:75,
+ change:80,
+ stamina:80,
+ defense:68
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:21,
+name:"송영진",
+team:"SSG",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:75,
+ control:68,
+ change:70,
+ stamina:72,
+ defense:65
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:22,
+name:"이로운",
+team:"SSG",
+position:"투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:80,
+ control:72,
+ change:76,
+ stamina:75,
+ defense:68
+},
+trait:"강속구",
+legendAvailable:false
+},
+
+{
+id:23,
+name:"조병현",
+team:"SSG",
+position:"불펜투수",
+type:"pitcher",
+grade:"S",
+stats:{
+ velocity:86,
+ control:80,
+ change:84,
+ stamina:78,
+ defense:70
+},
+trait:"필승조",
+legendAvailable:false
+},
+
+{
+id:24,
+name:"박지환",
+team:"SSG",
+position:"내야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:60,
+ contact:70,
+ speed:82,
+ defense:72,
+ eye:65
+},
+trait:"주루",
+legendAvailable:false
+},
+
+{
+id:25,
+name:"김성민",
+team:"SSG",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:70,
+ control:68,
+ change:68,
+ stamina:65,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+}
+
+];
+// =========================
+// SSG 랜더스 선수 26~50명
+// =========================
+
+
+{
+id:26,
+name:"김택형",
+team:"SSG",
+position:"불펜투수",
+type:"pitcher",
+grade:"S",
+stats:{
+ velocity:84,
+ control:82,
+ change:80,
+ stamina:75,
+ defense:70
+},
+trait:"좌완불펜",
+legendAvailable:false
+},
+
+{
+id:27,
+name:"신헌민",
+team:"SSG",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:72,
+ control:68,
+ change:70,
+ stamina:68,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:28,
+name:"백승건",
+team:"SSG",
+position:"투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:78,
+ control:75,
+ change:76,
+ stamina:72,
+ defense:65
+},
+trait:"좌완투수",
+legendAvailable:false
+},
+
+{
+id:29,
+name:"박민호",
+team:"SSG",
+position:"불펜투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:76,
+ control:80,
+ change:78,
+ stamina:70,
+ defense:65
+},
+trait:"제구형",
+legendAvailable:false
+},
+
+{
+id:30,
+name:"이기순",
+team:"SSG",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:70,
+ control:65,
+ change:68,
+ stamina:68,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:31,
+name:"최상민",
+team:"SSG",
+position:"외야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:60,
+ speed:75,
+ defense:70,
+ eye:55
+},
+trait:"빠른발",
+legendAvailable:false
+},
+
+{
+id:32,
+name:"하재훈",
+team:"SSG",
+position:"외야수",
+type:"batter",
+grade:"S",
+stats:{
+ power:78,
+ contact:72,
+ speed:70,
+ defense:75,
+ eye:70
+},
+trait:"장타력",
+legendAvailable:false
+},
+
+{
+id:33,
+name:"강진성",
+team:"SSG",
+position:"1루수",
+type:"batter",
+grade:"A",
+stats:{
+ power:70,
+ contact:72,
+ speed:55,
+ defense:68,
+ eye:65
+},
+trait:"클러치",
+legendAvailable:false
+},
+
+{
+id:34,
+name:"김민준",
+team:"SSG",
+position:"내야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:48,
+ contact:60,
+ speed:65,
+ defense:68,
+ eye:55
+},
+trait:"수비형",
+legendAvailable:false
+},
+
+{
+id:35,
+name:"안상현",
+team:"SSG",
+position:"내야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:55,
+ contact:68,
+ speed:72,
+ defense:78,
+ eye:65
+},
+trait:"멀티포지션",
+legendAvailable:false
+},
+
+{
+id:36,
+name:"최준우",
+team:"SSG",
+position:"내야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:62,
+ speed:70,
+ defense:65,
+ eye:58
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:37,
+name:"전의산",
+team:"SSG",
+position:"1루수",
+type:"batter",
+grade:"A",
+stats:{
+ power:75,
+ contact:65,
+ speed:50,
+ defense:65,
+ eye:60
+},
+trait:"거포본능",
+legendAvailable:false
+},
+
+{
+id:38,
+name:"현원회",
+team:"SSG",
+position:"포수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:58,
+ speed:35,
+ defense:65,
+ eye:55
+},
+trait:"수비형포수",
+legendAvailable:false
+},
+
+{
+id:39,
+name:"이현석",
+team:"SSG",
+position:"포수",
+type:"batter",
+grade:"A",
+stats:{
+ power:55,
+ contact:65,
+ speed:38,
+ defense:75,
+ eye:60
+},
+trait:"포수수비",
+legendAvailable:false
+},
+
+{
+id:40,
+name:"김건우",
+team:"SSG",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:74,
+ control:65,
+ change:68,
+ stamina:70,
+ defense:60
+},
+trait:"강속구",
+legendAvailable:false
+},
+
+{
+id:41,
+name:"정성곤",
+team:"SSG",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:73,
+ control:70,
+ change:70,
+ stamina:68,
+ defense:62
+},
+trait:"좌완",
+legendAvailable:false
+},
+
+{
+id:42,
+name:"김도현",
+team:"SSG",
+position:"투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:78,
+ control:74,
+ change:75,
+ stamina:76,
+ defense:65
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:43,
+name:"윤태현",
+team:"SSG",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:71,
+ control:68,
+ change:67,
+ stamina:70,
+ defense:60
+},
+trait:"제구형",
+legendAvailable:false
+},
+
+{
+id:44,
+name:"김찬형",
+team:"SSG",
+position:"내야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:50,
+ contact:62,
+ speed:65,
+ defense:70,
+ eye:58
+},
+trait:"수비형",
+legendAvailable:false
+},
+
+{
+id:45,
+name:"최경모",
+team:"SSG",
+position:"내야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:48,
+ contact:60,
+ speed:68,
+ defense:68,
+ eye:55
+},
+trait:"수비형",
+legendAvailable:false
+},
+
+{
+id:46,
+name:"김정민",
+team:"SSG",
+position:"포수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:42,
+ contact:55,
+ speed:35,
+ defense:62,
+ eye:50
+},
+trait:"포수유망주",
+legendAvailable:false
+},
+
+{
+id:47,
+name:"서동민",
+team:"SSG",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:72,
+ control:66,
+ change:68,
+ stamina:65,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:48,
+name:"이기암",
+team:"SSG",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:70,
+ control:65,
+ change:66,
+ stamina:65,
+ defense:58
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:49,
+name:"박성우",
+team:"SSG",
+position:"외야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:58,
+ speed:70,
+ defense:65,
+ eye:55
+},
+trait:"주루",
+legendAvailable:false
+},
+
+{
+id:50,
+name:"이승민",
+team:"SSG",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:71,
+ control:67,
+ change:65,
+ stamina:68,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+   }const KIA_PLAYERS = [
+
+{
+id:1,
+name:"김도영",
+team:"KIA",
+position:"3루수",
+type:"batter",
+grade:"시그니처",
+stats:{
+ power:90,
+ contact:95,
+ speed:98,
+ defense:85,
+ eye:90
+},
+trait:"천재타자",
+legendAvailable:true
+},
+
+{
+id:2,
+name:"양현종",
+team:"KIA",
+position:"선발투수",
+type:"pitcher",
+grade:"시그니처",
+stats:{
+ velocity:86,
+ control:95,
+ change:96,
+ stamina:98,
+ defense:80
+},
+trait:"에이스",
+legendAvailable:true
+},
+
+{
+id:3,
+name:"나성범",
+team:"KIA",
+position:"외야수",
+type:"batter",
+grade:"골든글러브",
+stats:{
+ power:94,
+ contact:88,
+ speed:70,
+ defense:78,
+ eye:86
+},
+trait:"거포본능",
+legendAvailable:false
+},
+
+{
+id:4,
+name:"최형우",
+team:"KIA",
+position:"외야수",
+type:"batter",
+grade:"시그니처",
+stats:{
+ power:95,
+ contact:96,
+ speed:55,
+ defense:70,
+ eye:94
+},
+trait:"클러치히터",
+legendAvailable:true
+},
+
+{
+id:5,
+name:"소크라테스",
+team:"KIA",
+position:"외야수",
+type:"batter",
+grade:"S",
+stats:{
+ power:82,
+ contact:84,
+ speed:86,
+ defense:82,
+ eye:80
+},
+trait:"호타준족",
+legendAvailable:false
+},
+
+{
+id:6,
+name:"정해영",
+team:"KIA",
+position:"마무리투수",
+type:"pitcher",
+grade:"골든글러브",
+stats:{
+ velocity:88,
+ control:90,
+ change:86,
+ stamina:82,
+ defense:75
+},
+trait:"철벽마무리",
+legendAvailable:false
+},
+
+{
+id:7,
+name:"이의리",
+team:"KIA",
+position:"선발투수",
+type:"pitcher",
+grade:"S",
+stats:{
+ velocity:90,
+ control:78,
+ change:85,
+ stamina:82,
+ defense:70
+},
+trait:"강속구",
+legendAvailable:false
+},
+
+{
+id:8,
+name:"윤영철",
+team:"KIA",
+position:"선발투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:78,
+ control:82,
+ change:80,
+ stamina:80,
+ defense:68
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:9,
+name:"임기영",
+team:"KIA",
+position:"선발투수",
+type:"pitcher",
+grade:"S",
+stats:{
+ velocity:78,
+ control:88,
+ change:90,
+ stamina:85,
+ defense:72
+},
+trait:"변화구",
+legendAvailable:false
+},
+
+{
+id:10,
+name:"전상현",
+team:"KIA",
+position:"불펜투수",
+type:"pitcher",
+grade:"S",
+stats:{
+ velocity:86,
+ control:84,
+ change:82,
+ stamina:78,
+ defense:70
+},
+trait:"필승조",
+legendAvailable:false
+},
+
+{
+id:11,
+name:"장현식",
+team:"KIA",
+position:"불펜투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:82,
+ control:80,
+ change:78,
+ stamina:75,
+ defense:68
+},
+trait:"강심장",
+legendAvailable:false
+},
+
+{
+id:12,
+name:"김태군",
+team:"KIA",
+position:"포수",
+type:"batter",
+grade:"S",
+stats:{
+ power:55,
+ contact:75,
+ speed:35,
+ defense:90,
+ eye:70
+},
+trait:"포수리더",
+legendAvailable:false
+},
+
+{
+id:13,
+name:"한준수",
+team:"KIA",
+position:"포수",
+type:"batter",
+grade:"A",
+stats:{
+ power:60,
+ contact:68,
+ speed:40,
+ defense:72,
+ eye:65
+},
+trait:"성장형포수",
+legendAvailable:false
+},
+
+{
+id:14,
+name:"박찬호",
+team:"KIA",
+position:"유격수",
+type:"batter",
+grade:"S",
+stats:{
+ power:60,
+ contact:82,
+ speed:85,
+ defense:90,
+ eye:75
+},
+trait:"수비의달인",
+legendAvailable:false
+},
+
+{
+id:15,
+name:"김선빈",
+team:"KIA",
+position:"2루수",
+type:"batter",
+grade:"골든글러브",
+stats:{
+ power:65,
+ contact:92,
+ speed:70,
+ defense:88,
+ eye:90
+},
+trait:"정교한타격",
+legendAvailable:false
+},
+
+{
+id:16,
+name:"이우성",
+team:"KIA",
+position:"외야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:70,
+ contact:72,
+ speed:60,
+ defense:70,
+ eye:68
+},
+trait:"장타력",
+legendAvailable:false
+},
+
+{
+id:17,
+name:"변우혁",
+team:"KIA",
+position:"1루수",
+type:"batter",
+grade:"A",
+stats:{
+ power:78,
+ contact:65,
+ speed:50,
+ defense:65,
+ eye:60
+},
+trait:"거포유망주",
+legendAvailable:false
+},
+
+{
+id:18,
+name:"황대인",
+team:"KIA",
+position:"1루수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:65,
+ contact:60,
+ speed:45,
+ defense:60,
+ eye:55
+},
+trait:"장타력",
+legendAvailable:false
+},
+
+{
+id:19,
+name:"고종욱",
+team:"KIA",
+position:"외야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:55,
+ contact:70,
+ speed:78,
+ defense:68,
+ eye:65
+},
+trait:"주루",
+legendAvailable:false
+},
+
+{
+id:20,
+name:"최원준",
+team:"KIA",
+position:"외야수",
+type:"batter",
+grade:"S",
+stats:{
+ power:65,
+ contact:82,
+ speed:88,
+ defense:80,
+ eye:78
+},
+trait:"호타준족",
+legendAvailable:false
+},
+
+{
+id:21,
+name:"김기훈",
+team:"KIA",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:75,
+ control:65,
+ change:70,
+ stamina:70,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:22,
+name:"곽도규",
+team:"KIA",
+position:"불펜투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:80,
+ control:74,
+ change:78,
+ stamina:72,
+ defense:65
+},
+trait:"좌완불펜",
+legendAvailable:false
+},
+
+{
+id:23,
+name:"김유신",
+team:"KIA",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:72,
+ control:68,
+ change:70,
+ stamina:68,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:24,
+name:"김도현",
+team:"KIA",
+position:"투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:78,
+ control:72,
+ change:75,
+ stamina:75,
+ defense:65
+},
+trait:"강속구",
+legendAvailable:false
+},
+
+{
+id:25,
+name:"이준영",
+team:"KIA",
+position:"불펜투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:76,
+ control:80,
+ change:78,
+ stamina:70,
+ defense:65
+},
+trait:"제구형",
+legendAvailable:false
+}
+
+];
+// =========================
+// KIA 타이거즈 선수 26~50명
+// =========================
+
+{
+id:26,
+name:"김승현",
+team:"KIA",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:70,
+ control:66,
+ change:68,
+ stamina:65,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:27,
+name:"김건국",
+team:"KIA",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:72,
+ control:68,
+ change:70,
+ stamina:68,
+ defense:60
+},
+trait:"제구형",
+legendAvailable:false
+},
+
+{
+id:28,
+name:"이형범",
+team:"KIA",
+position:"불펜투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:76,
+ control:78,
+ change:76,
+ stamina:72,
+ defense:65
+},
+trait:"불펜형",
+legendAvailable:false
+},
+
+{
+id:29,
+name:"장민기",
+team:"KIA",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:74,
+ control:66,
+ change:70,
+ stamina:68,
+ defense:60
+},
+trait:"좌완",
+legendAvailable:false
+},
+
+{
+id:30,
+name:"김현수",
+team:"KIA",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:71,
+ control:67,
+ change:68,
+ stamina:70,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:31,
+name:"오선우",
+team:"KIA",
+position:"외야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:55,
+ contact:60,
+ speed:55,
+ defense:60,
+ eye:58
+},
+trait:"장타력",
+legendAvailable:false
+},
+
+{
+id:32,
+name:"김석환",
+team:"KIA",
+position:"외야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:70,
+ contact:62,
+ speed:60,
+ defense:65,
+ eye:60
+},
+trait:"거포유망주",
+legendAvailable:false
+},
+
+{
+id:33,
+name:"박정우",
+team:"KIA",
+position:"외야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:60,
+ speed:75,
+ defense:70,
+ eye:55
+},
+trait:"주루",
+legendAvailable:false
+},
+
+{
+id:34,
+name:"이상준",
+team:"KIA",
+position:"내야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:58,
+ speed:65,
+ defense:65,
+ eye:55
+},
+trait:"수비형",
+legendAvailable:false
+},
+
+{
+id:35,
+name:"홍종표",
+team:"KIA",
+position:"내야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:50,
+ contact:68,
+ speed:72,
+ defense:75,
+ eye:65
+},
+trait:"멀티포지션",
+legendAvailable:false
+},
+
+{
+id:36,
+name:"김규성",
+team:"KIA",
+position:"내야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:42,
+ contact:60,
+ speed:70,
+ defense:70,
+ eye:55
+},
+trait:"수비형",
+legendAvailable:false
+},
+
+{
+id:37,
+name:"서건창",
+team:"KIA",
+position:"2루수",
+type:"batter",
+grade:"S",
+stats:{
+ power:70,
+ contact:85,
+ speed:70,
+ defense:78,
+ eye:82
+},
+trait:"베테랑",
+legendAvailable:false
+},
+
+{
+id:38,
+name:"김태진",
+team:"KIA",
+position:"내야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:55,
+ contact:72,
+ speed:75,
+ defense:78,
+ eye:65
+},
+trait:"수비력",
+legendAvailable:false
+},
+
+{
+id:39,
+name:"윤도현",
+team:"KIA",
+position:"내야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:50,
+ contact:60,
+ speed:65,
+ defense:65,
+ eye:55
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:40,
+name:"한승택",
+team:"KIA",
+position:"포수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:60,
+ speed:35,
+ defense:68,
+ eye:55
+},
+trait:"수비형포수",
+legendAvailable:false
+},
+
+{
+id:41,
+name:"신범수",
+team:"KIA",
+position:"포수",
+type:"batter",
+grade:"A",
+stats:{
+ power:55,
+ contact:65,
+ speed:38,
+ defense:72,
+ eye:60
+},
+trait:"포수수비",
+legendAvailable:false
+},
+
+{
+id:42,
+name:"김태군",
+team:"KIA",
+position:"포수",
+type:"batter",
+grade:"S",
+stats:{
+ power:55,
+ contact:75,
+ speed:35,
+ defense:90,
+ eye:70
+},
+trait:"포수리더",
+legendAvailable:false
+},
+
+{
+id:43,
+name:"이준범",
+team:"KIA",
+position:"내야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:58,
+ speed:65,
+ defense:65,
+ eye:55
+},
+trait:"수비형",
+legendAvailable:false
+},
+
+{
+id:44,
+name:"박민",
+team:"KIA",
+position:"내야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:55,
+ contact:70,
+ speed:75,
+ defense:78,
+ eye:65
+},
+trait:"멀티포지션",
+legendAvailable:false
+},
+
+{
+id:45,
+name:"김호령",
+team:"KIA",
+position:"외야수",
+type:"batter",
+grade:"S",
+stats:{
+ power:55,
+ contact:68,
+ speed:85,
+ defense:95,
+ eye:65
+},
+trait:"수비의달인",
+legendAvailable:false
+},
+
+{
+id:46,
+name:"류지혁",
+team:"KIA",
+position:"내야수",
+type:"batter",
+grade:"S",
+stats:{
+ power:60,
+ contact:78,
+ speed:70,
+ defense:82,
+ eye:72
+},
+trait:"꾸준함",
+legendAvailable:false
+},
+
+{
+id:47,
+name:"이창진",
+team:"KIA",
+position:"외야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:60,
+ contact:72,
+ speed:75,
+ defense:72,
+ eye:65
+},
+trait:"멀티플레이",
+legendAvailable:false
+},
+
+{
+id:48,
+name:"최정용",
+team:"KIA",
+position:"내야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:60,
+ speed:65,
+ defense:65,
+ eye:55
+},
+trait:"수비형",
+legendAvailable:false
+},
+
+{
+id:49,
+name:"김민식",
+team:"KIA",
+position:"포수",
+type:"batter",
+grade:"A",
+stats:{
+ power:50,
+ contact:68,
+ speed:35,
+ defense:80,
+ eye:65
+},
+trait:"포수수비",
+legendAvailable:false
+},
+
+{
+id:50,
+name:"황동하",
+team:"KIA",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:75,
+ control:68,
+ change:70,
+ stamina:72,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+}
+const SAMSUNG_PLAYERS = [
+
+{
+id:1,
+name:"구자욱",
+team:"삼성",
+position:"외야수",
+type:"batter",
+grade:"시그니처",
+stats:{
+ power:88,
+ contact:95,
+ speed:88,
+ defense:90,
+ eye:92
+},
+trait:"호타준족",
+legendAvailable:true
+},
+
+{
+id:2,
+name:"오승환",
+team:"삼성",
+position:"마무리투수",
+type:"pitcher",
+grade:"레전드",
+stats:{
+ velocity:95,
+ control:98,
+ change:90,
+ stamina:85,
+ defense:80
+},
+trait:"끝판왕",
+legendAvailable:false
+},
+
+{
+id:3,
+name:"원태인",
+team:"삼성",
+position:"선발투수",
+type:"pitcher",
+grade:"시그니처",
+stats:{
+ velocity:88,
+ control:94,
+ change:90,
+ stamina:92,
+ defense:75
+},
+trait:"에이스",
+legendAvailable:true
+},
+
+{
+id:4,
+name:"강민호",
+team:"삼성",
+position:"포수",
+type:"batter",
+grade:"골든글러브",
+stats:{
+ power:82,
+ contact:86,
+ speed:45,
+ defense:92,
+ eye:85
+},
+trait:"포수리더",
+legendAvailable:false
+},
+
+{
+id:5,
+name:"김지찬",
+team:"삼성",
+position:"내야수",
+type:"batter",
+grade:"S",
+stats:{
+ power:50,
+ contact:82,
+ speed:98,
+ defense:82,
+ eye:75
+},
+trait:"빠른발",
+legendAvailable:false
+},
+
+{
+id:6,
+name:"이재현",
+team:"삼성",
+position:"유격수",
+type:"batter",
+grade:"S",
+stats:{
+ power:72,
+ contact:78,
+ speed:82,
+ defense:88,
+ eye:75
+},
+trait:"수비의달인",
+legendAvailable:false
+},
+
+{
+id:7,
+name:"박병호",
+team:"삼성",
+position:"1루수",
+type:"batter",
+grade:"시그니처",
+stats:{
+ power:96,
+ contact:82,
+ speed:45,
+ defense:70,
+ eye:88
+},
+trait:"홈런왕",
+legendAvailable:true
+},
+
+{
+id:8,
+name:"김영웅",
+team:"삼성",
+position:"3루수",
+type:"batter",
+grade:"A",
+stats:{
+ power:72,
+ contact:68,
+ speed:70,
+ defense:70,
+ eye:65
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:9,
+name:"백정현",
+team:"삼성",
+position:"선발투수",
+type:"pitcher",
+grade:"S",
+stats:{
+ velocity:78,
+ control:88,
+ change:86,
+ stamina:85,
+ defense:70
+},
+trait:"베테랑",
+legendAvailable:false
+},
+
+{
+id:10,
+name:"임창민",
+team:"삼성",
+position:"불펜투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:80,
+ control:82,
+ change:80,
+ stamina:72,
+ defense:65
+},
+trait:"베테랑",
+legendAvailable:false
+},
+
+{
+id:11,
+name:"김태훈",
+team:"삼성",
+position:"불펜투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:78,
+ control:80,
+ change:82,
+ stamina:70,
+ defense:65
+},
+trait:"좌완불펜",
+legendAvailable:false
+},
+
+{
+id:12,
+name:"최채흥",
+team:"삼성",
+position:"선발투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:76,
+ control:78,
+ change:80,
+ stamina:78,
+ defense:65
+},
+trait:"좌완투수",
+legendAvailable:false
+},
+
+{
+id:13,
+name:"이승현",
+team:"삼성",
+position:"투수",
+type:"pitcher",
+grade:"S",
+stats:{
+ velocity:84,
+ control:80,
+ change:82,
+ stamina:75,
+ defense:68
+},
+trait:"강속구",
+legendAvailable:false
+},
+
+{
+id:14,
+name:"김재윤",
+team:"삼성",
+position:"불펜투수",
+type:"pitcher",
+grade:"S",
+stats:{
+ velocity:86,
+ control:86,
+ change:84,
+ stamina:78,
+ defense:70
+},
+trait:"필승조",
+legendAvailable:false
+},
+
+{
+id:15,
+name:"류지혁",
+team:"삼성",
+position:"내야수",
+type:"batter",
+grade:"S",
+stats:{
+ power:60,
+ contact:78,
+ speed:70,
+ defense:82,
+ eye:72
+},
+trait:"꾸준함",
+legendAvailable:false
+},
+
+{
+id:16,
+name:"전병우",
+team:"삼성",
+position:"내야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:65,
+ contact:65,
+ speed:60,
+ defense:70,
+ eye:60
+},
+trait:"멀티포지션",
+legendAvailable:false
+},
+
+{
+id:17,
+name:"김헌곤",
+team:"삼성",
+position:"외야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:55,
+ contact:70,
+ speed:72,
+ defense:75,
+ eye:65
+},
+trait:"수비형",
+legendAvailable:false
+},
+
+{
+id:18,
+name:"이성규",
+team:"삼성",
+position:"내야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:75,
+ contact:60,
+ speed:65,
+ defense:65,
+ eye:60
+},
+trait:"장타력",
+legendAvailable:false
+},
+
+{
+id:19,
+name:"김성윤",
+team:"삼성",
+position:"외야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:45,
+ contact:68,
+ speed:85,
+ defense:78,
+ eye:60
+},
+trait:"주루",
+legendAvailable:false
+},
+
+{
+id:20,
+name:"이병헌",
+team:"삼성",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:72,
+ control:68,
+ change:70,
+ stamina:68,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:21,
+name:"김윤수",
+team:"삼성",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:75,
+ control:65,
+ change:68,
+ stamina:70,
+ defense:60
+},
+trait:"강속구",
+legendAvailable:false
+},
+
+{
+id:22,
+name:"이호성",
+team:"삼성",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:73,
+ control:68,
+ change:70,
+ stamina:70,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:23,
+name:"조민성",
+team:"삼성",
+position:"내야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:58,
+ speed:60,
+ defense:65,
+ eye:55
+},
+trait:"수비형",
+legendAvailable:false
+},
+
+{
+id:24,
+name:"김동진",
+team:"삼성",
+position:"내야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:48,
+ contact:60,
+ speed:68,
+ defense:68,
+ eye:55
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:25,
+name:"차승준",
+team:"삼성",
+position:"내야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:50,
+ contact:60,
+ speed:65,
+ defense:65,
+ eye:55
+},
+trait:"유망주",
+legendAvailable:false
+}
+
+];
+// =========================
+// 삼성 라이온즈 선수 26~50명
+// =========================
+
+{
+id:26,
+name:"김서준",
+team:"삼성",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:72,
+ control:67,
+ change:68,
+ stamina:68,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:27,
+name:"홍정우",
+team:"삼성",
+position:"불펜투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:78,
+ control:75,
+ change:76,
+ stamina:72,
+ defense:65
+},
+trait:"불펜형",
+legendAvailable:false
+},
+
+{
+id:28,
+name:"김태훈(삼성)",
+team:"삼성",
+position:"투수",
+type:"pitcher",
+grade:"S",
+stats:{
+ velocity:82,
+ control:84,
+ change:82,
+ stamina:75,
+ defense:68
+},
+trait:"좌완불펜",
+legendAvailable:false
+},
+
+{
+id:29,
+name:"박세웅",
+team:"삼성",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:70,
+ control:65,
+ change:68,
+ stamina:65,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:30,
+name:"최하늘",
+team:"삼성",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:73,
+ control:66,
+ change:68,
+ stamina:70,
+ defense:60
+},
+trait:"좌완",
+legendAvailable:false
+},
+
+{
+id:31,
+name:"김성경",
+team:"삼성",
+position:"외야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:60,
+ speed:72,
+ defense:65,
+ eye:55
+},
+trait:"주루",
+legendAvailable:false
+},
+
+{
+id:32,
+name:"윤정빈",
+team:"삼성",
+position:"외야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:60,
+ contact:68,
+ speed:75,
+ defense:70,
+ eye:62
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:33,
+name:"김재혁",
+team:"삼성",
+position:"외야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:50,
+ contact:60,
+ speed:70,
+ defense:65,
+ eye:55
+},
+trait:"수비형",
+legendAvailable:false
+},
+
+{
+id:34,
+name:"박승주",
+team:"삼성",
+position:"외야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:58,
+ speed:65,
+ defense:60,
+ eye:55
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:35,
+name:"김동엽",
+team:"삼성",
+position:"외야수",
+type:"batter",
+grade:"S",
+stats:{
+ power:85,
+ contact:65,
+ speed:55,
+ defense:60,
+ eye:65
+},
+trait:"거포본능",
+legendAvailable:false
+},
+
+{
+id:36,
+name:"강한울",
+team:"삼성",
+position:"내야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:45,
+ contact:72,
+ speed:70,
+ defense:75,
+ eye:65
+},
+trait:"수비형",
+legendAvailable:false
+},
+
+{
+id:37,
+name:"안주형",
+team:"삼성",
+position:"내야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:58,
+ speed:65,
+ defense:65,
+ eye:55
+},
+trait:"수비형",
+legendAvailable:false
+},
+
+{
+id:38,
+name:"김재상",
+team:"삼성",
+position:"내야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:55,
+ contact:65,
+ speed:75,
+ defense:70,
+ eye:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:39,
+name:"양도근",
+team:"삼성",
+position:"내야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:60,
+ speed:70,
+ defense:65,
+ eye:55
+},
+trait:"주루",
+legendAvailable:false
+},
+
+{
+id:40,
+name:"이창용",
+team:"삼성",
+position:"내야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:50,
+ contact:62,
+ speed:65,
+ defense:68,
+ eye:58
+},
+trait:"멀티포지션",
+legendAvailable:false
+},
+
+{
+id:41,
+name:"김재성",
+team:"삼성",
+position:"포수",
+type:"batter",
+grade:"A",
+stats:{
+ power:55,
+ contact:65,
+ speed:40,
+ defense:75,
+ eye:60
+},
+trait:"포수수비",
+legendAvailable:false
+},
+
+{
+id:42,
+name:"김민수",
+team:"삼성",
+position:"포수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:58,
+ speed:35,
+ defense:62,
+ eye:50
+},
+trait:"수비형포수",
+legendAvailable:false
+},
+
+{
+id:43,
+name:"정진수",
+team:"삼성",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:70,
+ control:65,
+ change:67,
+ stamina:65,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:44,
+name:"박권후",
+team:"삼성",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:74,
+ control:68,
+ change:70,
+ stamina:70,
+ defense:60
+},
+trait:"강속구",
+legendAvailable:false
+},
+
+{
+id:45,
+name:"김시현",
+team:"삼성",
+position:"투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:78,
+ control:72,
+ change:74,
+ stamina:75,
+ defense:65
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:46,
+name:"박준용",
+team:"삼성",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:71,
+ control:66,
+ change:68,
+ stamina:68,
+ defense:60
+},
+trait:"제구형",
+legendAvailable:false
+},
+
+{
+id:47,
+name:"이현준",
+team:"삼성",
+position:"내야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:48,
+ contact:60,
+ speed:65,
+ defense:65,
+ eye:55
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:48,
+name:"김헌곤",
+team:"삼성",
+position:"외야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:55,
+ contact:70,
+ speed:72,
+ defense:75,
+ eye:65
+},
+trait:"베테랑",
+legendAvailable:false
+},
+
+{
+id:49,
+name:"류승민",
+team:"삼성",
+position:"외야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:60,
+ speed:68,
+ defense:65,
+ eye:55
+},
+trait:"주루",
+legendAvailable:false
+},
+
+{
+id:50,
+name:"김현준",
+team:"삼성",
+position:"외야수",
+type:"batter",
+grade:"S",
+stats:{
+ power:60,
+ contact:78,
+ speed:88,
+ defense:85,
+ eye:75
+},
+trait:"호타준족",
+legendAvailable:false
+   }
+const KT_PLAYERS = [
+
+{
+id:1,
+name:"강백호",
+team:"KT",
+position:"1루수",
+type:"batter",
+grade:"시그니처",
+stats:{
+ power:92,
+ contact:90,
+ speed:78,
+ defense:72,
+ eye:88
+},
+trait:"천재타격",
+legendAvailable:true
+},
+
+{
+id:2,
+name:"고영표",
+team:"KT",
+position:"선발투수",
+type:"pitcher",
+grade:"시그니처",
+stats:{
+ velocity:78,
+ control:98,
+ change:97,
+ stamina:94,
+ defense:78
+},
+trait:"마스터제구",
+legendAvailable:true
+},
+
+{
+id:3,
+name:"박병호",
+team:"KT",
+position:"1루수",
+type:"batter",
+grade:"시그니처",
+stats:{
+ power:98,
+ contact:82,
+ speed:45,
+ defense:70,
+ eye:88
+},
+trait:"홈런왕",
+legendAvailable:true
+},
+
+{
+id:4,
+name:"황재균",
+team:"KT",
+position:"3루수",
+type:"batter",
+grade:"골든글러브",
+stats:{
+ power:82,
+ contact:84,
+ speed:72,
+ defense:86,
+ eye:78
+},
+trait:"베테랑",
+legendAvailable:false
+},
+
+{
+id:5,
+name:"배정대",
+team:"KT",
+position:"외야수",
+type:"batter",
+grade:"S",
+stats:{
+ power:65,
+ contact:78,
+ speed:88,
+ defense:92,
+ eye:72
+},
+trait:"수비의달인",
+legendAvailable:false
+},
+
+{
+id:6,
+name:"장성우",
+team:"KT",
+position:"포수",
+type:"batter",
+grade:"골든글러브",
+stats:{
+ power:78,
+ contact:80,
+ speed:35,
+ defense:90,
+ eye:75
+},
+trait:"포수리더",
+legendAvailable:false
+},
+
+{
+id:7,
+name:"김상수",
+team:"KT",
+position:"유격수",
+type:"batter",
+grade:"S",
+stats:{
+ power:55,
+ contact:82,
+ speed:72,
+ defense:90,
+ eye:80
+},
+trait:"수비형",
+legendAvailable:false
+},
+
+{
+id:8,
+name:"오재일",
+team:"KT",
+position:"1루수",
+type:"batter",
+grade:"A",
+stats:{
+ power:82,
+ contact:70,
+ speed:40,
+ defense:68,
+ eye:78
+},
+trait:"장타력",
+legendAvailable:false
+},
+
+{
+id:9,
+name:"소형준",
+team:"KT",
+position:"선발투수",
+type:"pitcher",
+grade:"S",
+stats:{
+ velocity:84,
+ control:88,
+ change:86,
+ stamina:90,
+ defense:72
+},
+trait:"성장형에이스",
+legendAvailable:false
+},
+
+{
+id:10,
+name:"엄상백",
+team:"KT",
+position:"선발투수",
+type:"pitcher",
+grade:"S",
+stats:{
+ velocity:86,
+ control:84,
+ change:85,
+ stamina:86,
+ defense:70
+},
+trait:"안정감",
+legendAvailable:false
+},
+
+{
+id:11,
+name:"김민수",
+team:"KT",
+position:"투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:80,
+ control:76,
+ change:78,
+ stamina:75,
+ defense:65
+},
+trait:"불펜형",
+legendAvailable:false
+},
+
+{
+id:12,
+name:"박세진",
+team:"KT",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:72,
+ control:68,
+ change:70,
+ stamina:68,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:13,
+name:"손동현",
+team:"KT",
+position:"불펜투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:82,
+ control:78,
+ change:80,
+ stamina:72,
+ defense:65
+},
+trait:"필승조",
+legendAvailable:false
+},
+
+{
+id:14,
+name:"박영현",
+team:"KT",
+position:"불펜투수",
+type:"pitcher",
+grade:"S",
+stats:{
+ velocity:90,
+ control:86,
+ change:88,
+ stamina:78,
+ defense:70
+},
+trait:"강속구",
+legendAvailable:false
+},
+
+{
+id:15,
+name:"주권",
+team:"KT",
+position:"불펜투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:78,
+ control:84,
+ change:82,
+ stamina:75,
+ defense:68
+},
+trait:"베테랑",
+legendAvailable:false
+},
+
+{
+id:16,
+name:"문상철",
+team:"KT",
+position:"1루수",
+type:"batter",
+grade:"A",
+stats:{
+ power:70,
+ contact:68,
+ speed:50,
+ defense:65,
+ eye:62
+},
+trait:"장타력",
+legendAvailable:false
+},
+
+{
+id:17,
+name:"김민혁",
+team:"KT",
+position:"외야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:55,
+ contact:72,
+ speed:78,
+ defense:70,
+ eye:65
+},
+trait:"주루",
+legendAvailable:false
+},
+
+{
+id:18,
+name:"조용호",
+team:"KT",
+position:"외야수",
+type:"batter",
+grade:"S",
+stats:{
+ power:60,
+ contact:80,
+ speed:75,
+ defense:82,
+ eye:72
+},
+trait:"컨택형",
+legendAvailable:false
+},
+
+{
+id:19,
+name:"안치영",
+team:"KT",
+position:"외야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:58,
+ speed:70,
+ defense:65,
+ eye:55
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:20,
+name:"권동진",
+team:"KT",
+position:"내야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:60,
+ speed:68,
+ defense:65,
+ eye:55
+},
+trait:"수비형",
+legendAvailable:false
+},
+
+{
+id:21,
+name:"오윤석",
+team:"KT",
+position:"내야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:55,
+ contact:70,
+ speed:70,
+ defense:75,
+ eye:65
+},
+trait:"멀티포지션",
+legendAvailable:false
+},
+
+{
+id:22,
+name:"김준태",
+team:"KT",
+position:"포수",
+type:"batter",
+grade:"A",
+stats:{
+ power:50,
+ contact:65,
+ speed:35,
+ defense:75,
+ eye:60
+},
+trait:"포수수비",
+legendAvailable:false
+},
+
+{
+id:23,
+name:"강현우",
+team:"KT",
+position:"포수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:58,
+ speed:35,
+ defense:65,
+ eye:55
+},
+trait:"성장형포수",
+legendAvailable:false
+},
+
+{
+id:24,
+name:"김영현",
+team:"KT",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:74,
+ control:66,
+ change:68,
+ stamina:70,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:25,
+name:"이채호",
+team:"KT",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:72,
+ control:68,
+ change:70,
+ stamina:68,
+ defense:60
+},
+trait:"제구형",
+legendAvailable:false
+}
+
+];
+// =========================
+// KT 위즈 선수 26~50명
+// =========================
+
+{
+id:26,
+name:"김재윤",
+team:"KT",
+position:"마무리투수",
+type:"pitcher",
+grade:"S",
+stats:{
+ velocity:88,
+ control:86,
+ change:84,
+ stamina:80,
+ defense:70
+},
+trait:"철벽마무리",
+legendAvailable:false
+},
+
+{
+id:27,
+name:"이상동",
+team:"KT",
+position:"투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:80,
+ control:75,
+ change:76,
+ stamina:72,
+ defense:65
+},
+trait:"불펜형",
+legendAvailable:false
+},
+
+{
+id:28,
+name:"김민",
+team:"KT",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:72,
+ control:68,
+ change:70,
+ stamina:68,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:29,
+name:"전용주",
+team:"KT",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:73,
+ control:66,
+ change:68,
+ stamina:70,
+ defense:60
+},
+trait:"좌완",
+legendAvailable:false
+},
+
+{
+id:30,
+name:"김도현",
+team:"KT",
+position:"투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:78,
+ control:74,
+ change:75,
+ stamina:75,
+ defense:65
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:31,
+name:"강민국",
+team:"KT",
+position:"내야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:60,
+ speed:65,
+ defense:70,
+ eye:55
+},
+trait:"수비형",
+legendAvailable:false
+},
+
+{
+id:32,
+name:"신본기",
+team:"KT",
+position:"내야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:50,
+ contact:70,
+ speed:65,
+ defense:82,
+ eye:65
+},
+trait:"수비형",
+legendAvailable:false
+},
+
+{
+id:33,
+name:"장준원",
+team:"KT",
+position:"내야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:48,
+ contact:58,
+ speed:65,
+ defense:68,
+ eye:55
+},
+trait:"멀티포지션",
+legendAvailable:false
+},
+
+{
+id:34,
+name:"박경수",
+team:"KT",
+position:"2루수",
+type:"batter",
+grade:"골든글러브",
+stats:{
+ power:70,
+ contact:80,
+ speed:55,
+ defense:88,
+ eye:78
+},
+trait:"베테랑리더",
+legendAvailable:false
+},
+
+{
+id:35,
+name:"심우준",
+team:"KT",
+position:"유격수",
+type:"batter",
+grade:"S",
+stats:{
+ power:65,
+ contact:75,
+ speed:88,
+ defense:90,
+ eye:70
+},
+trait:"수비의달인",
+legendAvailable:false
+},
+
+{
+id:36,
+name:"김병준",
+team:"KT",
+position:"외야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:58,
+ speed:70,
+ defense:65,
+ eye:55
+},
+trait:"주루",
+legendAvailable:false
+},
+
+{
+id:37,
+name:"정준영",
+team:"KT",
+position:"외야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:55,
+ contact:68,
+ speed:75,
+ defense:72,
+ eye:62
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:38,
+name:"홍현빈",
+team:"KT",
+position:"외야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:50,
+ contact:70,
+ speed:80,
+ defense:75,
+ eye:65
+},
+trait:"빠른발",
+legendAvailable:false
+},
+
+{
+id:39,
+name:"송민섭",
+team:"KT",
+position:"외야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:42,
+ contact:60,
+ speed:78,
+ defense:70,
+ eye:55
+},
+trait:"대주자",
+legendAvailable:false
+},
+
+{
+id:40,
+name:"이호연",
+team:"KT",
+position:"내야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:55,
+ contact:72,
+ speed:72,
+ defense:75,
+ eye:65
+},
+trait:"멀티포지션",
+legendAvailable:false
+},
+
+{
+id:41,
+name:"윤준혁",
+team:"KT",
+position:"내야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:58,
+ speed:65,
+ defense:65,
+ eye:55
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:42,
+name:"한지용",
+team:"KT",
+position:"포수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:58,
+ speed:35,
+ defense:65,
+ eye:55
+},
+trait:"포수유망주",
+legendAvailable:false
+},
+
+{
+id:43,
+name:"이준희",
+team:"KT",
+position:"포수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:50,
+ contact:60,
+ speed:35,
+ defense:68,
+ eye:55
+},
+trait:"수비형포수",
+legendAvailable:false
+},
+
+{
+id:44,
+name:"박시윤",
+team:"KT",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:71,
+ control:66,
+ change:68,
+ stamina:68,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:45,
+name:"이상호",
+team:"KT",
+position:"내야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:62,
+ speed:65,
+ defense:70,
+ eye:55
+},
+trait:"수비형",
+legendAvailable:false
+},
+
+{
+id:46,
+name:"박민석",
+team:"KT",
+position:"내야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:50,
+ contact:60,
+ speed:65,
+ defense:65,
+ eye:55
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:47,
+name:"김태오",
+team:"KT",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:70,
+ control:65,
+ change:67,
+ stamina:65,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:48,
+name:"조대현",
+team:"KT",
+position:"투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:78,
+ control:72,
+ change:75,
+ stamina:74,
+ defense:65
+},
+trait:"강속구",
+legendAvailable:false
+},
+
+{
+id:49,
+name:"최성민",
+team:"KT",
+position:"외야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:60,
+ speed:68,
+ defense:65,
+ eye:55
+},
+trait:"주루",
+legendAvailable:false
+},
+
+{
+id:50,
+name:"안현민",
+team:"KT",
+position:"외야수",
+type:"batter",
+grade:"S",
+stats:{
+ power:75,
+ contact:78,
+ speed:72,
+ defense:75,
+ eye:70
+},
+trait:"성장형거포",
+legendAvailable:false
+   }
+const DOOSAN_PLAYERS = [
+
+{
+id:1,
+name:"양의지",
+team:"두산",
+position:"포수",
+type:"batter",
+grade:"시그니처",
+stats:{
+ power:92,
+ contact:96,
+ speed:55,
+ defense:95,
+ eye:94
+},
+trait:"포수의왕",
+legendAvailable:true
+},
+
+{
+id:2,
+name:"허경민",
+team:"두산",
+position:"3루수",
+type:"batter",
+grade:"골든글러브",
+stats:{
+ power:70,
+ contact:88,
+ speed:75,
+ defense:92,
+ eye:82
+},
+trait:"수비의달인",
+legendAvailable:false
+},
+
+{
+id:3,
+name:"곽빈",
+team:"두산",
+position:"선발투수",
+type:"pitcher",
+grade:"시그니처",
+stats:{
+ velocity:94,
+ control:84,
+ change:88,
+ stamina:90,
+ defense:72
+},
+trait:"강속구에이스",
+legendAvailable:true
+},
+
+{
+id:4,
+name:"정수빈",
+team:"두산",
+position:"외야수",
+type:"batter",
+grade:"골든글러브",
+stats:{
+ power:55,
+ contact:82,
+ speed:95,
+ defense:98,
+ eye:78
+},
+trait:"수비의달인",
+legendAvailable:false
+},
+
+{
+id:5,
+name:"김재환",
+team:"두산",
+position:"외야수",
+type:"batter",
+grade:"시그니처",
+stats:{
+ power:95,
+ contact:82,
+ speed:55,
+ defense:65,
+ eye:88
+},
+trait:"거포본능",
+legendAvailable:true
+},
+
+{
+id:6,
+name:"최원준",
+team:"두산",
+position:"외야수",
+type:"batter",
+grade:"S",
+stats:{
+ power:65,
+ contact:82,
+ speed:88,
+ defense:80,
+ eye:75
+},
+trait:"호타준족",
+legendAvailable:false
+},
+
+{
+id:7,
+name:"이영하",
+team:"두산",
+position:"투수",
+type:"pitcher",
+grade:"S",
+stats:{
+ velocity:86,
+ control:82,
+ change:84,
+ stamina:85,
+ defense:70
+},
+trait:"선발형",
+legendAvailable:false
+},
+
+{
+id:8,
+name:"김택연",
+team:"두산",
+position:"마무리투수",
+type:"pitcher",
+grade:"S",
+stats:{
+ velocity:94,
+ control:86,
+ change:90,
+ stamina:78,
+ defense:70
+},
+trait:"강심장",
+legendAvailable:false
+},
+
+{
+id:9,
+name:"라모스",
+team:"두산",
+position:"외야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:80,
+ contact:72,
+ speed:65,
+ defense:70,
+ eye:72
+},
+trait:"장타력",
+legendAvailable:false
+},
+
+{
+id:10,
+name:"전민재",
+team:"두산",
+position:"내야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:55,
+ contact:70,
+ speed:75,
+ defense:78,
+ eye:65
+},
+trait:"수비형",
+legendAvailable:false
+},
+
+{
+id:11,
+name:"강승호",
+team:"두산",
+position:"2루수",
+type:"batter",
+grade:"S",
+stats:{
+ power:72,
+ contact:75,
+ speed:75,
+ defense:80,
+ eye:70
+},
+trait:"멀티포지션",
+legendAvailable:false
+},
+
+{
+id:12,
+name:"양석환",
+team:"두산",
+position:"1루수",
+type:"batter",
+grade:"골든글러브",
+stats:{
+ power:88,
+ contact:80,
+ speed:50,
+ defense:72,
+ eye:75
+},
+trait:"장타력",
+legendAvailable:false
+},
+
+{
+id:13,
+name:"김기연",
+team:"두산",
+position:"포수",
+type:"batter",
+grade:"A",
+stats:{
+ power:55,
+ contact:65,
+ speed:35,
+ defense:72,
+ eye:60
+},
+trait:"포수수비",
+legendAvailable:false
+},
+
+{
+id:14,
+name:"최지강",
+team:"두산",
+position:"불펜투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:82,
+ control:76,
+ change:78,
+ stamina:72,
+ defense:65
+},
+trait:"필승조",
+legendAvailable:false
+},
+
+{
+id:15,
+name:"홍건희",
+team:"두산",
+position:"불펜투수",
+type:"pitcher",
+grade:"S",
+stats:{
+ velocity:86,
+ control:84,
+ change:82,
+ stamina:78,
+ defense:68
+},
+trait:"마무리경험",
+legendAvailable:false
+},
+
+{
+id:16,
+name:"최승용",
+team:"두산",
+position:"투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:80,
+ control:75,
+ change:78,
+ stamina:75,
+ defense:65
+},
+trait:"좌완투수",
+legendAvailable:false
+},
+
+{
+id:17,
+name:"박치국",
+team:"두산",
+position:"불펜투수",
+type:"pitcher",
+grade:"S",
+stats:{
+ velocity:84,
+ control:86,
+ change:82,
+ stamina:75,
+ defense:70
+},
+trait:"제구형",
+legendAvailable:false
+},
+
+{
+id:18,
+name:"김명신",
+team:"두산",
+position:"불펜투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:78,
+ control:82,
+ change:80,
+ stamina:72,
+ defense:65
+},
+trait:"베테랑",
+legendAvailable:false
+},
+
+{
+id:19,
+name:"이병헌",
+team:"두산",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:72,
+ control:68,
+ change:70,
+ stamina:68,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:20,
+name:"김유성",
+team:"두산",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:74,
+ control:65,
+ change:68,
+ stamina:70,
+ defense:60
+},
+trait:"강속구",
+legendAvailable:false
+},
+
+{
+id:21,
+name:"안재석",
+team:"두산",
+position:"내야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:50,
+ contact:60,
+ speed:70,
+ defense:70,
+ eye:55
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:22,
+name:"김대한",
+team:"두산",
+position:"외야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:60,
+ contact:65,
+ speed:80,
+ defense:75,
+ eye:60
+},
+trait:"주루",
+legendAvailable:false
+},
+
+{
+id:23,
+name:"조수행",
+team:"두산",
+position:"외야수",
+type:"batter",
+grade:"S",
+stats:{
+ power:45,
+ contact:70,
+ speed:98,
+ defense:85,
+ eye:65
+},
+trait:"대주자",
+legendAvailable:false
+},
+
+{
+id:24,
+name:"박준영",
+team:"두산",
+position:"내야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:60,
+ contact:68,
+ speed:72,
+ defense:75,
+ eye:62
+},
+trait:"멀티포지션",
+legendAvailable:false
+},
+
+{
+id:25,
+name:"서예일",
+team:"두산",
+position:"내야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:60,
+ speed:65,
+ defense:65,
+ eye:55
+},
+trait:"수비형",
+legendAvailable:false
+}
+
+];
+// =========================
+// 두산 베어스 선수 26~50명
+// =========================
+
+{
+id:26,
+name:"김민규",
+team:"두산",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:72,
+ control:68,
+ change:70,
+ stamina:68,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:27,
+name:"박정수",
+team:"두산",
+position:"투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:76,
+ control:78,
+ change:76,
+ stamina:72,
+ defense:65
+},
+trait:"제구형",
+legendAvailable:false
+},
+
+{
+id:28,
+name:"이교훈",
+team:"두산",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:70,
+ control:65,
+ change:68,
+ stamina:66,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:29,
+name:"박신지",
+team:"두산",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:75,
+ control:66,
+ change:70,
+ stamina:70,
+ defense:60
+},
+trait:"강속구",
+legendAvailable:false
+},
+
+{
+id:30,
+name:"김동주",
+team:"두산",
+position:"선발투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:82,
+ control:76,
+ change:78,
+ stamina:80,
+ defense:65
+},
+trait:"성장형에이스",
+legendAvailable:false
+},
+
+{
+id:31,
+name:"이유찬",
+team:"두산",
+position:"내야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:50,
+ contact:70,
+ speed:80,
+ defense:75,
+ eye:65
+},
+trait:"빠른발",
+legendAvailable:false
+},
+
+{
+id:32,
+name:"김재호",
+team:"두산",
+position:"유격수",
+type:"batter",
+grade:"골든글러브",
+stats:{
+ power:55,
+ contact:82,
+ speed:65,
+ defense:95,
+ eye:80
+},
+trait:"수비의달인",
+legendAvailable:false
+},
+
+{
+id:33,
+name:"허윤동",
+team:"두산",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:73,
+ control:67,
+ change:68,
+ stamina:70,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:34,
+name:"김지용",
+team:"두산",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:71,
+ control:68,
+ change:67,
+ stamina:68,
+ defense:60
+},
+trait:"제구형",
+legendAvailable:false
+},
+
+{
+id:35,
+name:"이현승",
+team:"두산",
+position:"투수",
+type:"pitcher",
+grade:"시그니처",
+stats:{
+ velocity:82,
+ control:90,
+ change:88,
+ stamina:75,
+ defense:70
+},
+trait:"베테랑좌완",
+legendAvailable:true
+},
+
+{
+id:36,
+name:"오재원",
+team:"두산",
+position:"2루수",
+type:"batter",
+grade:"레전드",
+stats:{
+ power:70,
+ contact:82,
+ speed:80,
+ defense:90,
+ eye:78
+},
+trait:"투지",
+legendAvailable:false
+},
+
+{
+id:37,
+name:"민병헌",
+team:"두산",
+position:"외야수",
+type:"batter",
+grade:"골든글러브",
+stats:{
+ power:70,
+ contact:85,
+ speed:88,
+ defense:86,
+ eye:78
+},
+trait:"호타준족",
+legendAvailable:false
+},
+
+{
+id:38,
+name:"박건우",
+team:"두산",
+position:"외야수",
+type:"batter",
+grade:"시그니처",
+stats:{
+ power:85,
+ contact:92,
+ speed:82,
+ defense:85,
+ eye:88
+},
+trait:"클러치히터",
+legendAvailable:true
+},
+
+{
+id:39,
+name:"정수빈",
+team:"두산",
+position:"외야수",
+type:"batter",
+grade:"골든글러브",
+stats:{
+ power:55,
+ contact:82,
+ speed:95,
+ defense:98,
+ eye:78
+},
+trait:"수비의달인",
+legendAvailable:false
+},
+
+{
+id:40,
+name:"오재일",
+team:"두산",
+position:"1루수",
+type:"batter",
+grade:"시그니처",
+stats:{
+ power:90,
+ contact:78,
+ speed:40,
+ defense:70,
+ eye:82
+},
+trait:"거포본능",
+legendAvailable:true
+},
+
+{
+id:41,
+name:"류지혁",
+team:"두산",
+position:"내야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:55,
+ contact:72,
+ speed:72,
+ defense:78,
+ eye:65
+},
+trait:"멀티포지션",
+legendAvailable:false
+},
+
+{
+id:42,
+name:"장원준",
+team:"두산",
+position:"투수",
+type:"pitcher",
+grade:"시그니처",
+stats:{
+ velocity:78,
+ control:92,
+ change:90,
+ stamina:88,
+ defense:70
+},
+trait:"베테랑에이스",
+legendAvailable:true
+},
+
+{
+id:43,
+name:"유희관",
+team:"두산",
+position:"선발투수",
+type:"pitcher",
+grade:"레전드",
+stats:{
+ velocity:65,
+ control:98,
+ change:96,
+ stamina:90,
+ defense:75
+},
+trait:"느린변화구",
+legendAvailable:false
+},
+
+{
+id:44,
+name:"정철원",
+team:"두산",
+position:"불펜투수",
+type:"pitcher",
+grade:"S",
+stats:{
+ velocity:88,
+ control:82,
+ change:84,
+ stamina:78,
+ defense:70
+},
+trait:"강속구",
+legendAvailable:false
+},
+
+{
+id:45,
+name:"김강률",
+team:"두산",
+position:"불펜투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:82,
+ control:78,
+ change:80,
+ stamina:75,
+ defense:68
+},
+trait:"필승조",
+legendAvailable:false
+},
+
+{
+id:46,
+name:"이승진",
+team:"두산",
+position:"불펜투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:75,
+ control:68,
+ change:70,
+ stamina:70,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:47,
+name:"박유연",
+team:"두산",
+position:"포수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:58,
+ speed:35,
+ defense:65,
+ eye:55
+},
+trait:"포수유망주",
+legendAvailable:false
+},
+
+{
+id:48,
+name:"윤준호",
+team:"두산",
+position:"포수",
+type:"batter",
+grade:"A",
+stats:{
+ power:55,
+ contact:65,
+ speed:35,
+ defense:72,
+ eye:60
+},
+trait:"포수수비",
+legendAvailable:false
+},
+
+{
+id:49,
+name:"양찬열",
+team:"두산",
+position:"외야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:60,
+ speed:70,
+ defense:65,
+ eye:55
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:50,
+name:"전다민",
+team:"두산",
+position:"외야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:58,
+ speed:75,
+ defense:65,
+ eye:55
+},
+trait:"주루",
+legendAvailable:false
+  }
+const LOTTE_PLAYERS = [
+
+{
+id:1,
+name:"손아섭",
+team:"롯데",
+position:"외야수",
+type:"batter",
+grade:"시그니처",
+stats:{
+ power:75,
+ contact:98,
+ speed:82,
+ defense:82,
+ eye:95
+},
+trait:"안타제조기",
+legendAvailable:true
+},
+
+{
+id:2,
+name:"전준우",
+team:"롯데",
+position:"외야수",
+type:"batter",
+grade:"시그니처",
+stats:{
+ power:85,
+ contact:88,
+ speed:70,
+ defense:78,
+ eye:82
+},
+trait:"클러치히터",
+legendAvailable:true
+},
+
+{
+id:3,
+name:"윤동희",
+team:"롯데",
+position:"외야수",
+type:"batter",
+grade:"S",
+stats:{
+ power:78,
+ contact:82,
+ speed:85,
+ defense:82,
+ eye:75
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:4,
+name:"박세웅",
+team:"롯데",
+position:"선발투수",
+type:"pitcher",
+grade:"시그니처",
+stats:{
+ velocity:90,
+ control:88,
+ change:86,
+ stamina:92,
+ defense:75
+},
+trait:"에이스",
+legendAvailable:true
+},
+
+{
+id:5,
+name:"김원중",
+team:"롯데",
+position:"마무리투수",
+type:"pitcher",
+grade:"S",
+stats:{
+ velocity:88,
+ control:84,
+ change:82,
+ stamina:80,
+ defense:70
+},
+trait:"철벽마무리",
+legendAvailable:false
+},
+
+{
+id:6,
+name:"나균안",
+team:"롯데",
+position:"선발투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:84,
+ control:80,
+ change:82,
+ stamina:84,
+ defense:70
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:7,
+name:"한현희",
+team:"롯데",
+position:"투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:80,
+ control:82,
+ change:78,
+ stamina:75,
+ defense:68
+},
+trait:"베테랑",
+legendAvailable:false
+},
+
+{
+id:8,
+name:"구승민",
+team:"롯데",
+position:"불펜투수",
+type:"pitcher",
+grade:"S",
+stats:{
+ velocity:86,
+ control:86,
+ change:84,
+ stamina:78,
+ defense:70
+},
+trait:"필승조",
+legendAvailable:false
+},
+
+{
+id:9,
+name:"최준용",
+team:"롯데",
+position:"불펜투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:84,
+ control:78,
+ change:80,
+ stamina:75,
+ defense:65
+},
+trait:"강속구",
+legendAvailable:false
+},
+
+{
+id:10,
+name:"정보근",
+team:"롯데",
+position:"포수",
+type:"batter",
+grade:"A",
+stats:{
+ power:55,
+ contact:65,
+ speed:35,
+ defense:80,
+ eye:60
+},
+trait:"포수수비",
+legendAvailable:false
+},
+
+{
+id:11,
+name:"유강남",
+team:"롯데",
+position:"포수",
+type:"batter",
+grade:"S",
+stats:{
+ power:78,
+ contact:80,
+ speed:35,
+ defense:88,
+ eye:75
+},
+trait:"포수리더",
+legendAvailable:false
+},
+
+{
+id:12,
+name:"노진혁",
+team:"롯데",
+position:"유격수",
+type:"batter",
+grade:"S",
+stats:{
+ power:80,
+ contact:78,
+ speed:60,
+ defense:82,
+ eye:75
+},
+trait:"장타유격수",
+legendAvailable:false
+},
+
+{
+id:13,
+name:"정훈",
+team:"롯데",
+position:"내야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:65,
+ contact:75,
+ speed:55,
+ defense:72,
+ eye:70
+},
+trait:"베테랑",
+legendAvailable:false
+},
+
+{
+id:14,
+name:"김민성",
+team:"롯데",
+position:"내야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:60,
+ contact:75,
+ speed:60,
+ defense:80,
+ eye:70
+},
+trait:"멀티포지션",
+legendAvailable:false
+},
+
+{
+id:15,
+name:"나승엽",
+team:"롯데",
+position:"1루수",
+type:"batter",
+grade:"A",
+stats:{
+ power:70,
+ contact:65,
+ speed:55,
+ defense:65,
+ eye:62
+},
+trait:"거포유망주",
+legendAvailable:false
+},
+
+{
+id:16,
+name:"고승민",
+team:"롯데",
+position:"내외야수",
+type:"batter",
+grade:"S",
+stats:{
+ power:70,
+ contact:80,
+ speed:82,
+ defense:75,
+ eye:72
+},
+trait:"호타준족",
+legendAvailable:false
+},
+
+{
+id:17,
+name:"김진욱",
+team:"롯데",
+position:"투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:82,
+ control:75,
+ change:78,
+ stamina:75,
+ defense:65
+},
+trait:"좌완투수",
+legendAvailable:false
+},
+
+{
+id:18,
+name:"이인복",
+team:"롯데",
+position:"선발투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:80,
+ control:82,
+ change:80,
+ stamina:80,
+ defense:68
+},
+trait:"제구형",
+legendAvailable:false
+},
+
+{
+id:19,
+name:"진승현",
+team:"롯데",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:74,
+ control:68,
+ change:70,
+ stamina:70,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:20,
+name:"김도규",
+team:"롯데",
+position:"불펜투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:80,
+ control:75,
+ change:78,
+ stamina:72,
+ defense:65
+},
+trait:"불펜형",
+legendAvailable:false
+},
+
+{
+id:21,
+name:"황성빈",
+team:"롯데",
+position:"외야수",
+type:"batter",
+grade:"S",
+stats:{
+ power:45,
+ contact:72,
+ speed:98,
+ defense:85,
+ eye:65
+},
+trait:"대주자",
+legendAvailable:false
+},
+
+{
+id:22,
+name:"장두성",
+team:"롯데",
+position:"외야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:40,
+ contact:55,
+ speed:80,
+ defense:65,
+ eye:50
+},
+trait:"빠른발",
+legendAvailable:false
+},
+
+{
+id:23,
+name:"안치홍",
+team:"롯데",
+position:"2루수",
+type:"batter",
+grade:"골든글러브",
+stats:{
+ power:75,
+ contact:88,
+ speed:65,
+ defense:82,
+ eye:85
+},
+trait:"꾸준함",
+legendAvailable:false
+},
+
+{
+id:24,
+name:"김상수",
+team:"롯데",
+position:"내야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:45,
+ contact:72,
+ speed:70,
+ defense:80,
+ eye:70
+},
+trait:"수비형",
+legendAvailable:false
+},
+
+{
+id:25,
+name:"이주찬",
+team:"롯데",
+position:"내야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:58,
+ speed:65,
+ defense:65,
+ eye:55
+},
+trait:"성장형",
+legendAvailable:false
+}
+
+];
+// =========================
+// 롯데 자이언츠 선수 26~50명
+// =========================
+
+{
+id:26,
+name:"김강현",
+team:"롯데",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:72,
+ control:68,
+ change:70,
+ stamina:68,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:27,
+name:"박진형",
+team:"롯데",
+position:"불펜투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:78,
+ control:80,
+ change:76,
+ stamina:72,
+ defense:65
+},
+trait:"제구형",
+legendAvailable:false
+},
+
+{
+id:28,
+name:"서준원",
+team:"롯데",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:75,
+ control:68,
+ change:70,
+ stamina:70,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:29,
+name:"김창훈",
+team:"롯데",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:71,
+ control:65,
+ change:68,
+ stamina:66,
+ defense:60
+},
+trait:"좌완",
+legendAvailable:false
+},
+
+{
+id:30,
+name:"이민석",
+team:"롯데",
+position:"선발투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:84,
+ control:72,
+ change:75,
+ stamina:78,
+ defense:65
+},
+trait:"강속구",
+legendAvailable:false
+},
+
+{
+id:31,
+name:"박준우",
+team:"롯데",
+position:"내야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:58,
+ speed:65,
+ defense:65,
+ eye:55
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:32,
+name:"한태양",
+team:"롯데",
+position:"내야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:50,
+ contact:68,
+ speed:75,
+ defense:72,
+ eye:60
+},
+trait:"멀티포지션",
+legendAvailable:false
+},
+
+{
+id:33,
+name:"김민석",
+team:"롯데",
+position:"외야수",
+type:"batter",
+grade:"S",
+stats:{
+ power:55,
+ contact:75,
+ speed:90,
+ defense:75,
+ eye:68
+},
+trait:"빠른발",
+legendAvailable:false
+},
+
+{
+id:34,
+name:"조세진",
+team:"롯데",
+position:"외야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:65,
+ contact:65,
+ speed:70,
+ defense:68,
+ eye:60
+},
+trait:"성장형거포",
+legendAvailable:false
+},
+
+{
+id:35,
+name:"김동혁",
+team:"롯데",
+position:"외야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:58,
+ speed:68,
+ defense:65,
+ eye:55
+},
+trait:"주루",
+legendAvailable:false
+},
+
+{
+id:36,
+name:"배영빈",
+team:"롯데",
+position:"내야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:60,
+ speed:70,
+ defense:65,
+ eye:55
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:37,
+name:"최항",
+team:"롯데",
+position:"내야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:55,
+ contact:70,
+ speed:65,
+ defense:75,
+ eye:65
+},
+trait:"수비형",
+legendAvailable:false
+},
+
+{
+id:38,
+name:"이학주",
+team:"롯데",
+position:"유격수",
+type:"batter",
+grade:"A",
+stats:{
+ power:60,
+ contact:68,
+ speed:72,
+ defense:78,
+ eye:65
+},
+trait:"수비력",
+legendAvailable:false
+},
+
+{
+id:39,
+name:"오선진",
+team:"롯데",
+position:"내야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:45,
+ contact:70,
+ speed:60,
+ defense:80,
+ eye:65
+},
+trait:"베테랑",
+legendAvailable:false
+},
+
+{
+id:40,
+name:"김세민",
+team:"롯데",
+position:"내야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:42,
+ contact:58,
+ speed:65,
+ defense:65,
+ eye:50
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:41,
+name:"손성빈",
+team:"롯데",
+position:"포수",
+type:"batter",
+grade:"A",
+stats:{
+ power:60,
+ contact:65,
+ speed:35,
+ defense:78,
+ eye:60
+},
+trait:"포수수비",
+legendAvailable:false
+},
+
+{
+id:42,
+name:"강태율",
+team:"롯데",
+position:"포수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:58,
+ speed:35,
+ defense:65,
+ eye:55
+},
+trait:"포수유망주",
+legendAvailable:false
+},
+
+{
+id:43,
+name:"이정근",
+team:"롯데",
+position:"포수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:60,
+ speed:35,
+ defense:62,
+ eye:55
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:44,
+name:"김진성",
+team:"롯데",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:70,
+ control:65,
+ change:68,
+ stamina:65,
+ defense:60
+},
+trait:"베테랑",
+legendAvailable:false
+},
+
+{
+id:45,
+name:"정성종",
+team:"롯데",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:73,
+ control:67,
+ change:70,
+ stamina:70,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:46,
+name:"윤성빈",
+team:"롯데",
+position:"투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:85,
+ control:68,
+ change:72,
+ stamina:75,
+ defense:65
+},
+trait:"강속구",
+legendAvailable:false
+},
+
+{
+id:47,
+name:"김세현",
+team:"롯데",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:74,
+ control:68,
+ change:70,
+ stamina:68,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:48,
+name:"최이준",
+team:"롯데",
+position:"투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:78,
+ control:74,
+ change:76,
+ stamina:72,
+ defense:65
+},
+trait:"불펜형",
+legendAvailable:false
+},
+
+{
+id:49,
+name:"김동규",
+team:"롯데",
+position:"외야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:60,
+ speed:70,
+ defense:65,
+ eye:55
+},
+trait:"주루",
+legendAvailable:false
+},
+
+{
+id:50,
+name:"나승엽",
+team:"롯데",
+position:"1루수",
+type:"batter",
+grade:"A",
+stats:{
+ power:72,
+ contact:65,
+ speed:55,
+ defense:68,
+ eye:62
+},
+trait:"거포유망주",
+legendAvailable:false
+  }const HANWHA_PLAYERS = [
+
+{
+id:1,
+name:"노시환",
+team:"한화",
+position:"3루수",
+type:"batter",
+grade:"시그니처",
+stats:{
+ power:95,
+ contact:82,
+ speed:65,
+ defense:75,
+ eye:85
+},
+trait:"거포본능",
+legendAvailable:true
+},
+
+{
+id:2,
+name:"류현진",
+team:"한화",
+position:"선발투수",
+type:"pitcher",
+grade:"레전드",
+stats:{
+ velocity:88,
+ control:99,
+ change:98,
+ stamina:95,
+ defense:80
+},
+trait:"괴물에이스",
+legendAvailable:false,
+signatureRequired:true
+},
+
+{
+id:3,
+name:"문동주",
+team:"한화",
+position:"선발투수",
+type:"pitcher",
+grade:"시그니처",
+stats:{
+ velocity:99,
+ control:78,
+ change:88,
+ stamina:85,
+ defense:70
+},
+trait:"강속구에이스",
+legendAvailable:true
+},
+
+{
+id:4,
+name:"채은성",
+team:"한화",
+position:"1루수",
+type:"batter",
+grade:"S",
+stats:{
+ power:85,
+ contact:82,
+ speed:55,
+ defense:70,
+ eye:80
+},
+trait:"클러치",
+legendAvailable:false
+},
+
+{
+id:5,
+name:"김태연",
+team:"한화",
+position:"내야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:65,
+ contact:72,
+ speed:65,
+ defense:70,
+ eye:65
+},
+trait:"멀티포지션",
+legendAvailable:false
+},
+
+{
+id:6,
+name:"하주석",
+team:"한화",
+position:"유격수",
+type:"batter",
+grade:"S",
+stats:{
+ power:65,
+ contact:75,
+ speed:78,
+ defense:85,
+ eye:68
+},
+trait:"수비형",
+legendAvailable:false
+},
+
+{
+id:7,
+name:"이진영",
+team:"한화",
+position:"외야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:60,
+ contact:70,
+ speed:75,
+ defense:72,
+ eye:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:8,
+name:"최재훈",
+team:"한화",
+position:"포수",
+type:"batter",
+grade:"S",
+stats:{
+ power:55,
+ contact:78,
+ speed:35,
+ defense:88,
+ eye:75
+},
+trait:"포수리더",
+legendAvailable:false
+},
+
+{
+id:9,
+name:"김서현",
+team:"한화",
+position:"투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:92,
+ control:70,
+ change:75,
+ stamina:72,
+ defense:65
+},
+trait:"강속구",
+legendAvailable:false
+},
+
+{
+id:10,
+name:"주현상",
+team:"한화",
+position:"불펜투수",
+type:"pitcher",
+grade:"S",
+stats:{
+ velocity:88,
+ control:85,
+ change:84,
+ stamina:78,
+ defense:70
+},
+trait:"필승조",
+legendAvailable:false
+},
+
+{
+id:11,
+name:"박상원",
+team:"한화",
+position:"불펜투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:82,
+ control:80,
+ change:78,
+ stamina:75,
+ defense:65
+},
+trait:"불펜형",
+legendAvailable:false
+},
+
+{
+id:12,
+name:"김범수",
+team:"한화",
+position:"투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:80,
+ control:82,
+ change:80,
+ stamina:75,
+ defense:65
+},
+trait:"좌완",
+legendAvailable:false
+},
+
+{
+id:13,
+name:"황준서",
+team:"한화",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:78,
+ control:68,
+ change:72,
+ stamina:70,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:14,
+name:"이태양",
+team:"한화",
+position:"투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:75,
+ control:88,
+ change:85,
+ stamina:78,
+ defense:70
+},
+trait:"제구형",
+legendAvailable:false
+},
+
+{
+id:15,
+name:"장시환",
+team:"한화",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:76,
+ control:65,
+ change:70,
+ stamina:72,
+ defense:60
+},
+trait:"베테랑",
+legendAvailable:false
+},
+
+{
+id:16,
+name:"정은원",
+team:"한화",
+position:"2루수",
+type:"batter",
+grade:"S",
+stats:{
+ power:55,
+ contact:82,
+ speed:82,
+ defense:80,
+ eye:85
+},
+trait:"출루형",
+legendAvailable:false
+},
+
+{
+id:17,
+name:"김인환",
+team:"한화",
+position:"1루수",
+type:"batter",
+grade:"A",
+stats:{
+ power:70,
+ contact:65,
+ speed:45,
+ defense:65,
+ eye:60
+},
+trait:"장타력",
+legendAvailable:false
+},
+
+{
+id:18,
+name:"이도윤",
+team:"한화",
+position:"내야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:45,
+ contact:68,
+ speed:70,
+ defense:80,
+ eye:60
+},
+trait:"수비형",
+legendAvailable:false
+},
+
+{
+id:19,
+name:"김강민",
+team:"한화",
+position:"외야수",
+type:"batter",
+grade:"골든글러브",
+stats:{
+ power:55,
+ contact:75,
+ speed:70,
+ defense:95,
+ eye:70
+},
+trait:"베테랑수비",
+legendAvailable:false
+},
+
+{
+id:20,
+name:"장진혁",
+team:"한화",
+position:"외야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:60,
+ contact:65,
+ speed:80,
+ defense:75,
+ eye:60
+},
+trait:"주루",
+legendAvailable:false
+},
+
+{
+id:21,
+name:"임종찬",
+team:"한화",
+position:"외야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:58,
+ speed:70,
+ defense:65,
+ eye:55
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:22,
+name:"권광민",
+team:"한화",
+position:"외야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:55,
+ contact:58,
+ speed:65,
+ defense:60,
+ eye:55
+},
+trait:"성장형거포",
+legendAvailable:false
+},
+
+{
+id:23,
+name:"박정현",
+team:"한화",
+position:"내야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:60,
+ speed:65,
+ defense:65,
+ eye:55
+},
+trait:"수비형",
+legendAvailable:false
+},
+
+{
+id:24,
+name:"조한민",
+team:"한화",
+position:"내야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:58,
+ speed:68,
+ defense:65,
+ eye:55
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:25,
+name:"허관회",
+team:"한화",
+position:"포수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:60,
+ speed:35,
+ defense:65,
+ eye:55
+},
+trait:"포수유망주",
+legendAvailable:false
+}
+
+];
+// =========================
+// 한화 이글스 선수 26~50명
+// =========================
+
+{
+id:26,
+name:"김기중",
+team:"한화",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:76,
+ control:70,
+ change:72,
+ stamina:70,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:27,
+name:"김규연",
+team:"한화",
+position:"투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:80,
+ control:75,
+ change:78,
+ stamina:72,
+ defense:65
+},
+trait:"불펜형",
+legendAvailable:false
+},
+
+{
+id:28,
+name:"한승주",
+team:"한화",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:72,
+ control:68,
+ change:70,
+ stamina:66,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:29,
+name:"김종수",
+team:"한화",
+position:"불펜투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:78,
+ control:82,
+ change:80,
+ stamina:70,
+ defense:65
+},
+trait:"제구형",
+legendAvailable:false
+},
+
+{
+id:30,
+name:"윤산흠",
+team:"한화",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:74,
+ control:67,
+ change:70,
+ stamina:68,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:31,
+name:"박윤철",
+team:"한화",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:73,
+ control:66,
+ change:68,
+ stamina:70,
+ defense:60
+},
+trait:"좌완",
+legendAvailable:false
+},
+
+{
+id:32,
+name:"김태연",
+team:"한화",
+position:"내야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:65,
+ contact:72,
+ speed:65,
+ defense:70,
+ eye:65
+},
+trait:"멀티포지션",
+legendAvailable:false
+},
+
+{
+id:33,
+name:"노시환",
+team:"한화",
+position:"3루수",
+type:"batter",
+grade:"시그니처",
+stats:{
+ power:95,
+ contact:82,
+ speed:65,
+ defense:75,
+ eye:85
+},
+trait:"거포본능",
+legendAvailable:true
+},
+
+{
+id:34,
+name:"문현빈",
+team:"한화",
+position:"내야수",
+type:"batter",
+grade:"S",
+stats:{
+ power:60,
+ contact:78,
+ speed:75,
+ defense:75,
+ eye:70
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:35,
+name:"이상혁",
+team:"한화",
+position:"내야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:58,
+ speed:65,
+ defense:65,
+ eye:55
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:36,
+name:"오선진",
+team:"한화",
+position:"내야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:45,
+ contact:70,
+ speed:60,
+ defense:80,
+ eye:65
+},
+trait:"베테랑",
+legendAvailable:false
+},
+
+{
+id:37,
+name:"최인호",
+team:"한화",
+position:"외야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:55,
+ contact:68,
+ speed:75,
+ defense:70,
+ eye:60
+},
+trait:"주루",
+legendAvailable:false
+},
+
+{
+id:38,
+name:"이원석",
+team:"한화",
+position:"외야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:60,
+ speed:65,
+ defense:65,
+ eye:55
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:39,
+name:"유로결",
+team:"한화",
+position:"외야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:58,
+ speed:72,
+ defense:65,
+ eye:55
+},
+trait:"빠른발",
+legendAvailable:false
+},
+
+{
+id:40,
+name:"이성원",
+team:"한화",
+position:"포수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:60,
+ speed:35,
+ defense:65,
+ eye:55
+},
+trait:"포수유망주",
+legendAvailable:false
+},
+
+{
+id:41,
+name:"박상언",
+team:"한화",
+position:"포수",
+type:"batter",
+grade:"A",
+stats:{
+ power:50,
+ contact:65,
+ speed:35,
+ defense:75,
+ eye:60
+},
+trait:"포수수비",
+legendAvailable:false
+},
+
+{
+id:42,
+name:"김민우",
+team:"한화",
+position:"선발투수",
+type:"pitcher",
+grade:"시그니처",
+stats:{
+ velocity:78,
+ control:90,
+ change:88,
+ stamina:90,
+ defense:70
+},
+trait:"베테랑에이스",
+legendAvailable:true
+},
+
+{
+id:43,
+name:"장민재",
+team:"한화",
+position:"투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:74,
+ control:86,
+ change:84,
+ stamina:78,
+ defense:68
+},
+trait:"제구형",
+legendAvailable:false
+},
+
+{
+id:44,
+name:"송진우",
+team:"한화",
+position:"선발투수",
+type:"pitcher",
+grade:"레전드",
+stats:{
+ velocity:82,
+ control:98,
+ change:96,
+ stamina:95,
+ defense:80
+},
+trait:"전설의좌완",
+legendAvailable:false,
+signatureRequired:true
+},
+
+{
+id:45,
+name:"구대성",
+team:"한화",
+position:"투수",
+type:"pitcher",
+grade:"레전드",
+stats:{
+ velocity:90,
+ control:90,
+ change:94,
+ stamina:88,
+ defense:75
+},
+trait:"특급마무리",
+legendAvailable:false,
+signatureRequired:true
+},
+
+{
+id:46,
+name:"김태균",
+team:"한화",
+position:"1루수",
+type:"batter",
+grade:"레전드",
+stats:{
+ power:88,
+ contact:98,
+ speed:45,
+ defense:70,
+ eye:95
+},
+trait:"정교한거포",
+legendAvailable:false,
+signatureRequired:true
+},
+
+{
+id:47,
+name:"정근우",
+team:"한화",
+position:"2루수",
+type:"batter",
+grade:"레전드",
+stats:{
+ power:70,
+ contact:88,
+ speed:90,
+ defense:85,
+ eye:85
+},
+trait:"투지",
+legendAvailable:false,
+signatureRequired:true
+},
+
+{
+id:48,
+name:"이성열",
+team:"한화",
+position:"외야수",
+type:"batter",
+grade:"S",
+stats:{
+ power:82,
+ contact:72,
+ speed:55,
+ defense:65,
+ eye:75
+},
+trait:"장타력",
+legendAvailable:false
+},
+
+{
+id:49,
+name:"송광민",
+team:"한화",
+position:"3루수",
+type:"batter",
+grade:"A",
+stats:{
+ power:70,
+ contact:75,
+ speed:55,
+ defense:70,
+ eye:65
+},
+trait:"클러치",
+legendAvailable:false
+},
+
+{
+id:50,
+name:"김태완",
+team:"한화",
+position:"1루수",
+type:"batter",
+grade:"A",
+stats:{
+ power:78,
+ contact:70,
+ speed:45,
+ defense:65,
+ eye:72
+},
+trait:"거포형",
+legendAvailable:false
+}const KIWOOM_PLAYERS = [
+
+{
+id:1,
+name:"김혜성",
+team:"키움",
+position:"2루수",
+type:"batter",
+grade:"시그니처",
+stats:{
+ power:70,
+ contact:92,
+ speed:98,
+ defense:95,
+ eye:85
+},
+trait:"호타준족",
+legendAvailable:true
+},
+
+{
+id:2,
+name:"이정후",
+team:"키움",
+position:"외야수",
+type:"batter",
+grade:"시그니처",
+stats:{
+ power:88,
+ contact:99,
+ speed:90,
+ defense:92,
+ eye:95
+},
+trait:"천재타격",
+legendAvailable:true
+},
+
+{
+id:3,
+name:"안우진",
+team:"키움",
+position:"선발투수",
+type:"pitcher",
+grade:"시그니처",
+stats:{
+ velocity:99,
+ control:88,
+ change:95,
+ stamina:92,
+ defense:75
+},
+trait:"강속구에이스",
+legendAvailable:true
+},
+
+{
+id:4,
+name:"송성문",
+team:"키움",
+position:"내야수",
+type:"batter",
+grade:"S",
+stats:{
+ power:75,
+ contact:82,
+ speed:70,
+ defense:78,
+ eye:75
+},
+trait:"클러치",
+legendAvailable:false
+},
+
+{
+id:5,
+name:"김재현",
+team:"키움",
+position:"포수",
+type:"batter",
+grade:"A",
+stats:{
+ power:55,
+ contact:70,
+ speed:35,
+ defense:82,
+ eye:65
+},
+trait:"포수수비",
+legendAvailable:false
+},
+
+{
+id:6,
+name:"도슨",
+team:"키움",
+position:"외야수",
+type:"batter",
+grade:"S",
+stats:{
+ power:80,
+ contact:82,
+ speed:78,
+ defense:75,
+ eye:78
+},
+trait:"외국인타자",
+legendAvailable:false
+},
+
+{
+id:7,
+name:"이주형",
+team:"키움",
+position:"외야수",
+type:"batter",
+grade:"S",
+stats:{
+ power:75,
+ contact:80,
+ speed:85,
+ defense:75,
+ eye:70
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:8,
+name:"김건희",
+team:"키움",
+position:"포수",
+type:"batter",
+grade:"A",
+stats:{
+ power:70,
+ contact:65,
+ speed:45,
+ defense:70,
+ eye:60
+},
+trait:"거포포수",
+legendAvailable:false
+},
+
+{
+id:9,
+name:"전준표",
+team:"키움",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:75,
+ control:68,
+ change:70,
+ stamina:70,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:10,
+name:"하영민",
+team:"키움",
+position:"선발투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:82,
+ control:80,
+ change:78,
+ stamina:82,
+ defense:65
+},
+trait:"안정형",
+legendAvailable:false
+},
+
+{
+id:11,
+name:"김성민",
+team:"키움",
+position:"투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:78,
+ control:82,
+ change:80,
+ stamina:75,
+ defense:65
+},
+trait:"좌완",
+legendAvailable:false
+},
+
+{
+id:12,
+name:"주승우",
+team:"키움",
+position:"불펜투수",
+type:"pitcher",
+grade:"S",
+stats:{
+ velocity:90,
+ control:78,
+ change:82,
+ stamina:75,
+ defense:70
+},
+trait:"강속구",
+legendAvailable:false
+},
+
+{
+id:13,
+name:"김동혁",
+team:"키움",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:74,
+ control:68,
+ change:70,
+ stamina:68,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:14,
+name:"문성현",
+team:"키움",
+position:"투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:76,
+ control:85,
+ change:82,
+ stamina:75,
+ defense:65
+},
+trait:"제구형",
+legendAvailable:false
+},
+
+{
+id:15,
+name:"조영건",
+team:"키움",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:73,
+ control:67,
+ change:68,
+ stamina:70,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:16,
+name:"김수환",
+team:"키움",
+position:"1루수",
+type:"batter",
+grade:"A",
+stats:{
+ power:65,
+ contact:65,
+ speed:45,
+ defense:65,
+ eye:60
+},
+trait:"장타력",
+legendAvailable:false
+},
+
+{
+id:17,
+name:"김웅빈",
+team:"키움",
+position:"내야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:65,
+ contact:68,
+ speed:55,
+ defense:70,
+ eye:62
+},
+trait:"멀티포지션",
+legendAvailable:false
+},
+
+{
+id:18,
+name:"전병우",
+team:"키움",
+position:"내야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:60,
+ contact:70,
+ speed:60,
+ defense:75,
+ eye:65
+},
+trait:"수비형",
+legendAvailable:false
+},
+
+{
+id:19,
+name:"김휘집",
+team:"키움",
+position:"유격수",
+type:"batter",
+grade:"S",
+stats:{
+ power:65,
+ contact:75,
+ speed:72,
+ defense:82,
+ eye:68
+},
+trait:"수비형유격수",
+legendAvailable:false
+},
+
+{
+id:20,
+name:"박수종",
+team:"키움",
+position:"외야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:60,
+ speed:75,
+ defense:65,
+ eye:55
+},
+trait:"주루",
+legendAvailable:false
+},
+
+{
+id:21,
+name:"임병욱",
+team:"키움",
+position:"외야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:60,
+ contact:65,
+ speed:85,
+ defense:75,
+ eye:60
+},
+trait:"빠른발",
+legendAvailable:false
+},
+
+{
+id:22,
+name:"이용규",
+team:"키움",
+position:"외야수",
+type:"batter",
+grade:"골든글러브",
+stats:{
+ power:45,
+ contact:85,
+ speed:88,
+ defense:85,
+ eye:80
+},
+trait:"베테랑",
+legendAvailable:false
+},
+
+{
+id:23,
+name:"김수환",
+team:"키움",
+position:"내야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:50,
+ contact:58,
+ speed:45,
+ defense:60,
+ eye:55
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:24,
+name:"김동헌",
+team:"키움",
+position:"포수",
+type:"batter",
+grade:"A",
+stats:{
+ power:55,
+ contact:70,
+ speed:40,
+ defense:75,
+ eye:65
+},
+trait:"포수형",
+legendAvailable:false
+},
+
+{
+id:25,
+name:"박준형",
+team:"키움",
+position:"내야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:58,
+ speed:65,
+ defense:65,
+ eye:55
+},
+trait:"성장형",
+legendAvailable:false
+}
+
+];
+// =========================
+// 키움 히어로즈 선수 26~50명
+// =========================
+
+{
+id:26,
+name:"김인범",
+team:"키움",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:73,
+ control:68,
+ change:70,
+ stamina:68,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:27,
+name:"오상원",
+team:"키움",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:74,
+ control:66,
+ change:68,
+ stamina:70,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:28,
+name:"김선기",
+team:"키움",
+position:"투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:78,
+ control:80,
+ change:78,
+ stamina:75,
+ defense:65
+},
+trait:"제구형",
+legendAvailable:false
+},
+
+{
+id:29,
+name:"이명종",
+team:"키움",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:72,
+ control:68,
+ change:69,
+ stamina:68,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:30,
+name:"김주형",
+team:"키움",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:75,
+ control:65,
+ change:70,
+ stamina:70,
+ defense:60
+},
+trait:"강속구",
+legendAvailable:false
+},
+
+{
+id:31,
+name:"장재영",
+team:"키움",
+position:"투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:92,
+ control:65,
+ change:75,
+ stamina:78,
+ defense:65
+},
+trait:"강속구",
+legendAvailable:false
+},
+
+{
+id:32,
+name:"김동규",
+team:"키움",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:74,
+ control:67,
+ change:68,
+ stamina:70,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:33,
+name:"양지율",
+team:"키움",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:71,
+ control:68,
+ change:70,
+ stamina:65,
+ defense:60
+},
+trait:"좌완",
+legendAvailable:false
+},
+
+{
+id:34,
+name:"김병휘",
+team:"키움",
+position:"내야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:58,
+ speed:68,
+ defense:65,
+ eye:55
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:35,
+name:"신준우",
+team:"키움",
+position:"유격수",
+type:"batter",
+grade:"A",
+stats:{
+ power:50,
+ contact:65,
+ speed:75,
+ defense:75,
+ eye:60
+},
+trait:"수비형",
+legendAvailable:false
+},
+
+{
+id:36,
+name:"김태진",
+team:"키움",
+position:"내야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:50,
+ contact:75,
+ speed:78,
+ defense:75,
+ eye:65
+},
+trait:"멀티포지션",
+legendAvailable:false
+},
+
+{
+id:37,
+name:"송우현",
+team:"키움",
+position:"외야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:65,
+ contact:70,
+ speed:70,
+ defense:68,
+ eye:65
+},
+trait:"장타형",
+legendAvailable:false
+},
+
+{
+id:38,
+name:"주성원",
+team:"키움",
+position:"외야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:60,
+ speed:70,
+ defense:65,
+ eye:55
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:39,
+name:"예진원",
+team:"키움",
+position:"외야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:58,
+ speed:72,
+ defense:65,
+ eye:55
+},
+trait:"주루",
+legendAvailable:false
+},
+
+{
+id:40,
+name:"김재현",
+team:"키움",
+position:"포수",
+type:"batter",
+grade:"A",
+stats:{
+ power:55,
+ contact:70,
+ speed:35,
+ defense:82,
+ eye:65
+},
+trait:"포수수비",
+legendAvailable:false
+},
+
+{
+id:41,
+name:"박성빈",
+team:"키움",
+position:"포수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:60,
+ speed:35,
+ defense:65,
+ eye:55
+},
+trait:"포수유망주",
+legendAvailable:false
+},
+
+{
+id:42,
+name:"김태훈",
+team:"키움",
+position:"불펜투수",
+type:"pitcher",
+grade:"S",
+stats:{
+ velocity:85,
+ control:86,
+ change:84,
+ stamina:75,
+ defense:70
+},
+trait:"베테랑불펜",
+legendAvailable:false
+},
+
+{
+id:43,
+name:"양현",
+team:"키움",
+position:"투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:78,
+ control:84,
+ change:82,
+ stamina:72,
+ defense:65
+},
+trait:"제구형",
+legendAvailable:false
+},
+
+{
+id:44,
+name:"원종현",
+team:"키움",
+position:"불펜투수",
+type:"pitcher",
+grade:"S",
+stats:{
+ velocity:84,
+ control:85,
+ change:82,
+ stamina:78,
+ defense:70
+},
+trait:"필승조",
+legendAvailable:false
+},
+
+{
+id:45,
+name:"조상우",
+team:"키움",
+position:"마무리투수",
+type:"pitcher",
+grade:"시그니처",
+stats:{
+ velocity:96,
+ control:88,
+ change:90,
+ stamina:80,
+ defense:75
+},
+trait:"강속구마무리",
+legendAvailable:true
+},
+
+{
+id:46,
+name:"서건창",
+team:"키움",
+position:"2루수",
+type:"batter",
+grade:"레전드",
+stats:{
+ power:65,
+ contact:92,
+ speed:85,
+ defense:82,
+ eye:88
+},
+trait:"교타자",
+legendAvailable:false,
+signatureRequired:true
+},
+
+{
+id:47,
+name:"박병호",
+team:"키움",
+position:"1루수",
+type:"batter",
+grade:"레전드",
+stats:{
+ power:99,
+ contact:78,
+ speed:40,
+ defense:70,
+ eye:90
+},
+trait:"국민거포",
+legendAvailable:false,
+signatureRequired:true
+},
+
+{
+id:48,
+name:"강정호",
+team:"키움",
+position:"유격수",
+type:"batter",
+grade:"레전드",
+stats:{
+ power:92,
+ contact:88,
+ speed:78,
+ defense:82,
+ eye:90
+},
+trait:"거포유격수",
+legendAvailable:false,
+signatureRequired:true
+},
+
+{
+id:49,
+name:"김하성",
+team:"키움",
+position:"유격수",
+type:"batter",
+grade:"레전드",
+stats:{
+ power:85,
+ contact:88,
+ speed:90,
+ defense:98,
+ eye:85
+},
+trait:"수비의신",
+legendAvailable:false,
+signatureRequired:true
+},
+
+{
+id:50,
+name:"이택근",
+team:"키움",
+position:"외야수",
+type:"batter",
+grade:"레전드",
+stats:{
+ power:75,
+ contact:90,
+ speed:80,
+ defense:85,
+ eye:85
+},
+trait:"베테랑타자",
+legendAvailable:false,
+signatureRequired:true
+}
+
+const NC_PLAYERS = [
+
+{
+id:1,
+name:"손아섭",
+team:"NC",
+position:"외야수",
+type:"batter",
+grade:"시그니처",
+stats:{
+ power:75,
+ contact:98,
+ speed:82,
+ defense:80,
+ eye:95
+},
+trait:"안타제조기",
+legendAvailable:true
+},
+
+{
+id:2,
+name:"박건우",
+team:"NC",
+position:"외야수",
+type:"batter",
+grade:"시그니처",
+stats:{
+ power:85,
+ contact:92,
+ speed:82,
+ defense:85,
+ eye:88
+},
+trait:"클러치히터",
+legendAvailable:true
+},
+
+{
+id:3,
+name:"박민우",
+team:"NC",
+position:"2루수",
+type:"batter",
+grade:"시그니처",
+stats:{
+ power:60,
+ contact:95,
+ speed:88,
+ defense:88,
+ eye:90
+},
+trait:"교타자",
+legendAvailable:true
+},
+
+{
+id:4,
+name:"김형준",
+team:"NC",
+position:"포수",
+type:"batter",
+grade:"S",
+stats:{
+ power:70,
+ contact:75,
+ speed:40,
+ defense:90,
+ eye:70
+},
+trait:"수비형포수",
+legendAvailable:false
+},
+
+{
+id:5,
+name:"서호철",
+team:"NC",
+position:"내야수",
+type:"batter",
+grade:"S",
+stats:{
+ power:65,
+ contact:80,
+ speed:75,
+ defense:78,
+ eye:70
+},
+trait:"멀티포지션",
+legendAvailable:false
+},
+
+{
+id:6,
+name:"김주원",
+team:"NC",
+position:"유격수",
+type:"batter",
+grade:"S",
+stats:{
+ power:60,
+ contact:70,
+ speed:82,
+ defense:90,
+ eye:65
+},
+trait:"수비의달인",
+legendAvailable:false
+},
+
+{
+id:7,
+name:"마틴",
+team:"NC",
+position:"외야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:78,
+ contact:72,
+ speed:75,
+ defense:72,
+ eye:70
+},
+trait:"외국인타자",
+legendAvailable:false
+},
+
+{
+id:8,
+name:"데이비슨",
+team:"NC",
+position:"1루수",
+type:"batter",
+grade:"S",
+stats:{
+ power:95,
+ contact:70,
+ speed:40,
+ defense:65,
+ eye:75
+},
+trait:"거포본능",
+legendAvailable:false
+},
+
+{
+id:9,
+name:"이용준",
+team:"NC",
+position:"투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:82,
+ control:78,
+ change:80,
+ stamina:75,
+ defense:65
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:10,
+name:"하트",
+team:"NC",
+position:"선발투수",
+type:"pitcher",
+grade:"S",
+stats:{
+ velocity:88,
+ control:90,
+ change:92,
+ stamina:88,
+ defense:70
+},
+trait:"외국인에이스",
+legendAvailable:false
+},
+
+{
+id:11,
+name:"카일 하트",
+team:"NC",
+position:"선발투수",
+type:"pitcher",
+grade:"S",
+stats:{
+ velocity:88,
+ control:90,
+ change:92,
+ stamina:88,
+ defense:70
+},
+trait:"좌완에이스",
+legendAvailable:false
+},
+
+{
+id:12,
+name:"이재학",
+team:"NC",
+position:"선발투수",
+type:"pitcher",
+grade:"S",
+stats:{
+ velocity:78,
+ control:88,
+ change:90,
+ stamina:82,
+ defense:70
+},
+trait:"변화구",
+legendAvailable:false
+},
+
+{
+id:13,
+name:"구창모",
+team:"NC",
+position:"선발투수",
+type:"pitcher",
+grade:"시그니처",
+stats:{
+ velocity:90,
+ control:88,
+ change:92,
+ stamina:85,
+ defense:70
+},
+trait:"좌완에이스",
+legendAvailable:true
+},
+
+{
+id:14,
+name:"류진욱",
+team:"NC",
+position:"불펜투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:82,
+ control:78,
+ change:80,
+ stamina:75,
+ defense:65
+},
+trait:"불펜형",
+legendAvailable:false
+},
+
+{
+id:15,
+name:"김영규",
+team:"NC",
+position:"불펜투수",
+type:"pitcher",
+grade:"S",
+stats:{
+ velocity:84,
+ control:86,
+ change:88,
+ stamina:75,
+ defense:70
+},
+trait:"좌완불펜",
+legendAvailable:false
+},
+
+{
+id:16,
+name:"임정호",
+team:"NC",
+position:"불펜투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:78,
+ control:82,
+ change:80,
+ stamina:70,
+ defense:65
+},
+trait:"베테랑",
+legendAvailable:false
+},
+
+{
+id:17,
+name:"송명기",
+team:"NC",
+position:"투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:84,
+ control:74,
+ change:76,
+ stamina:78,
+ defense:65
+},
+trait:"강속구",
+legendAvailable:false
+},
+
+{
+id:18,
+name:"김시훈",
+team:"NC",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:76,
+ control:68,
+ change:70,
+ stamina:70,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:19,
+name:"오영수",
+team:"NC",
+position:"1루수",
+type:"batter",
+grade:"A",
+stats:{
+ power:65,
+ contact:65,
+ speed:45,
+ defense:65,
+ eye:60
+},
+trait:"장타형",
+legendAvailable:false
+},
+
+{
+id:20,
+name:"김한별",
+team:"NC",
+position:"내야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:60,
+ speed:70,
+ defense:65,
+ eye:55
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:21,
+name:"도태훈",
+team:"NC",
+position:"내야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:50,
+ contact:70,
+ speed:65,
+ defense:75,
+ eye:65
+},
+trait:"멀티포지션",
+legendAvailable:false
+},
+
+{
+id:22,
+name:"박세혁",
+team:"NC",
+position:"포수",
+type:"batter",
+grade:"A",
+stats:{
+ power:50,
+ contact:72,
+ speed:35,
+ defense:82,
+ eye:65
+},
+trait:"포수리더",
+legendAvailable:false
+},
+
+{
+id:23,
+name:"천재환",
+team:"NC",
+position:"외야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:60,
+ speed:75,
+ defense:65,
+ eye:55
+},
+trait:"주루",
+legendAvailable:false
+},
+
+{
+id:24,
+name:"김성욱",
+team:"NC",
+position:"외야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:65,
+ contact:65,
+ speed:75,
+ defense:80,
+ eye:60
+},
+trait:"수비형외야",
+legendAvailable:false
+},
+
+{
+id:25,
+name:"최정원",
+team:"NC",
+position:"내야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:60,
+ speed:75,
+ defense:65,
+ eye:55
+},
+trait:"빠른발",
+legendAvailable:false
+}
+
+];
+// =========================
+// NC 다이노스 선수 26~50명
+// =========================
+
+{
+id:26,
+name:"김건태",
+team:"NC",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:73,
+ control:68,
+ change:70,
+ stamina:68,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:27,
+name:"이준호",
+team:"NC",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:72,
+ control:66,
+ change:68,
+ stamina:70,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:28,
+name:"신민혁",
+team:"NC",
+position:"선발투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:80,
+ control:84,
+ change:82,
+ stamina:80,
+ defense:68
+},
+trait:"제구형",
+legendAvailable:false
+},
+
+{
+id:29,
+name:"이용찬",
+team:"NC",
+position:"마무리투수",
+type:"pitcher",
+grade:"S",
+stats:{
+ velocity:86,
+ control:86,
+ change:84,
+ stamina:78,
+ defense:70
+},
+trait:"베테랑마무리",
+legendAvailable:false
+},
+
+{
+id:30,
+name:"한재승",
+team:"NC",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:74,
+ control:67,
+ change:70,
+ stamina:68,
+ defense:60
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:31,
+name:"최성영",
+team:"NC",
+position:"투수",
+type:"pitcher",
+grade:"A",
+stats:{
+ velocity:76,
+ control:84,
+ change:82,
+ stamina:74,
+ defense:65
+},
+trait:"좌완",
+legendAvailable:false
+},
+
+{
+id:32,
+name:"김주한",
+team:"NC",
+position:"투수",
+type:"pitcher",
+grade:"일반",
+stats:{
+ velocity:75,
+ control:65,
+ change:68,
+ stamina:70,
+ defense:60
+},
+trait:"강속구",
+legendAvailable:false
+},
+
+{
+id:33,
+name:"박한결",
+team:"NC",
+position:"외야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:58,
+ speed:72,
+ defense:65,
+ eye:55
+},
+trait:"성장형",
+legendAvailable:false
+},
+
+{
+id:34,
+name:"한석현",
+team:"NC",
+position:"외야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:50,
+ contact:68,
+ speed:80,
+ defense:72,
+ eye:60
+},
+trait:"빠른발",
+legendAvailable:false
+},
+
+{
+id:35,
+name:"김기환",
+team:"NC",
+position:"외야수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:40,
+ contact:60,
+ speed:75,
+ defense:65,
+ eye:55
+},
+trait:"주루",
+legendAvailable:false
+},
+
+{
+id:36,
+name:"윤형준",
+team:"NC",
+position:"1루수",
+type:"batter",
+grade:"A",
+stats:{
+ power:70,
+ contact:65,
+ speed:45,
+ defense:65,
+ eye:60
+},
+trait:"장타력",
+legendAvailable:false
+},
+
+{
+id:37,
+name:"박대온",
+team:"NC",
+position:"포수",
+type:"batter",
+grade:"일반",
+stats:{
+ power:45,
+ contact:60,
+ speed:35,
+ defense:65,
+ eye:55
+},
+trait:"포수유망주",
+legendAvailable:false
+},
+
+{
+id:38,
+name:"안중열",
+team:"NC",
+position:"포수",
+type:"batter",
+grade:"A",
+stats:{
+ power:50,
+ contact:65,
+ speed:35,
+ defense:75,
+ eye:60
+},
+trait:"포수수비",
+legendAvailable:false
+},
+
+{
+id:39,
+name:"김주원",
+team:"NC",
+position:"유격수",
+type:"batter",
+grade:"S",
+stats:{
+ power:60,
+ contact:70,
+ speed:82,
+ defense:90,
+ eye:65
+},
+trait:"수비의달인",
+legendAvailable:false
+},
+
+{
+id:40,
+name:"박준영",
+team:"NC",
+position:"내야수",
+type:"batter",
+grade:"A",
+stats:{
+ power:60,
+ contact:68,
+ speed:72,
+ defense:75,
+ eye:62
+},
+trait:"멀티포지션",
+legendAvailable:false
+},
+
+{
+id:41,
+name:"강진성",
+team:"NC",
+position:"1루수",
+type:"batter",
+grade:"A",
+stats:{
+ power:72,
+ contact:72,
+ speed:55,
+ defense:65,
+ eye:65
+},
+trait:"클러치",
+legendAvailable:false
+},
+
+{
+id:42,
+name:"모창민",
+team:"NC",
+position:"3루수",
+type:"batter",
+grade:"레전드",
+stats:{
+ power:80,
+ contact:82,
+ speed:55,
+ defense:75,
+ eye:75
+},
+trait:"베테랑거포",
+legendAvailable:false,
+signatureRequired:true
+},
+
+{
+id:43,
+name:"나성범",
+team:"NC",
+position:"외야수",
+type:"batter",
+grade:"레전드",
+stats:{
+ power:95,
+ contact:90,
+ speed:82,
+ defense:85,
+ eye:88
+},
+trait:"국가대표거포",
+legendAvailable:false,
+signatureRequired:true
+},
+
+{
+id:44,
+name:"이호준",
+team:"NC",
+position:"1루수",
+type:"batter",
+grade:"레전드",
+stats:{
+ power:90,
+ contact:88,
+ speed:40,
+ defense:65,
+ eye:85
+},
+trait:"거포본능",
+legendAvailable:false,
+signatureRequired:true
+},
+
+{
+id:45,
+name:"이종욱",
+team:"NC",
+position:"외야수",
+type:"batter",
+grade:"레전드",
+stats:{
+ power:55,
+ contact:82,
+ speed:95,
+ defense:90,
+ eye:75
+},
+trait:"빠른발",
+legendAvailable:false,
+signatureRequired:true
+},
+
+{
+id:46,
+name:"손시헌",
+team:"NC",
+position:"유격수",
+type:"batter",
+grade:"레전드",
+stats:{
+ power:55,
+ contact:80,
+ speed:65,
+ defense:95,
+ eye:75
+},
+trait:"수비의신",
+legendAvailable:false,
+signatureRequired:true
+},
+
+{
+id:47,
+name:"박석민",
+team:"NC",
+position:"3루수",
+type:"batter",
+grade:"레전드",
+stats:{
+ power:85,
+ contact:88,
+ speed:45,
+ defense:75,
+ eye:90
+},
+trait:"클러치거포",
+legendAvailable:false,
+signatureRequired:true
+},
+
+{
+id:48,
+name:"임창민",
+team:"NC",
+position:"마무리투수",
+type:"pitcher",
+grade:"시그니처",
+stats:{
+ velocity:86,
+ control:88,
+ change:90,
+ stamina:75,
+ defense:70
+},
+trait:"마무리투수",
+legendAvailable:true
+},
+
+{
+id:49,
+name:"원종현",
+team:"NC",
+position:"불펜투수",
+type:"pitcher",
+grade:"시그니처",
+stats:{
+ velocity:85,
+ control:86,
+ change:84,
+ stamina:78,
+ defense:70
+},
+trait:"필승조",
+legendAvailable:true
+},
+
+{
+id:50,
+name:"구창모",
+team:"NC",
+position:"선발투수",
+type:"pitcher",
+grade:"시그니처",
+stats:{
+ velocity:90,
+ control:88,
+ change:92,
+ stamina:85,
+ defense:70
+},
+trait:"좌완에이스",
+legendAvailable:true
+}
