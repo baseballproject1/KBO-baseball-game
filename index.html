@@ -140,6 +140,74 @@ KT 위즈
 </button>
 
 
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KBO 카드게임</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<h1>⚾ KBO 카드게임</h1>
+
+
+<div class="container">
+
+
+<h2>구단 선택</h2>
+
+
+<button onclick="selectTeam('LG')">
+LG 트윈스
+</button>
+
+
+<button onclick="selectTeam('SSG')">
+SSG 랜더스
+</button>
+
+
+<button onclick="selectTeam('KIA')">
+KIA 타이거즈
+</button>
+
+
+<button onclick="selectTeam('SAMSUNG')">
+삼성 라이온즈
+</button>
+
+
+<button onclick="selectTeam('KT')">
+KT 위즈
+</button>
+
+
+<button onclick="selectTeam('DOOSAN')">
+두산 베어스
+</button>
+
+
+<button onclick="selectTeam('LOTTE')">
+롯데 자이언츠
+</button>
+
+
+<button onclick="selectTeam('HANWHA')">
+한화 이글스
+</button>
+
+
 <button onclick="selectTeam('KIWOOM')">
 키움 히어로즈
 </button>
@@ -164,11 +232,12 @@ NC 다이노스
 </div>
 
 
-
 </div>
 
 
 
+
+<!-- 데이터 연결 -->
 
 <script src="data/players.js"></script>
 
@@ -189,10 +258,7 @@ function selectTeam(teamId){
 
     `
     <h2>${team.name}</h2>
-
-    <p>
-    보유 선수 : ${team.players.length}명
-    </p>
+    <p>선수 ${team.players.length}명</p>
     `;
 
 
@@ -206,15 +272,20 @@ function selectTeam(teamId){
         html +=
 
         `
-        <div class="player">
+        <div class="player" data-grade="${player.grade}">
+
 
         <b>${player.name}</b><br>
 
+
         포지션 : ${player.position}<br>
+
 
         등급 : ${player.grade}<br>
 
+
         특성 : ${player.trait}
+
 
         </div>
 
