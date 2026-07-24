@@ -138,61 +138,283 @@ button:active{
 .player[data-grade="일반"]{
 
     border-color:white;
+/* style.css */
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+
+    margin:0;
+    padding:15px;
+
+    background:
+    linear-gradient(#111,#202020);
+
+    color:white;
+
+    font-family:
+    "Noto Sans KR",
+    Arial,
+    sans-serif;
 
 }
 
 
+/* 제목 */
+
+h1{
+
+    text-align:center;
+
+    font-size:30px;
+
+    margin:15px 0 25px;
+
+}
+
+
+/* 메인 컨테이너 */
+
+.container{
+
+    max-width:520px;
+
+    margin:auto;
+
+    background:#181818;
+
+    padding:18px;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 0 20px rgba(0,0,0,0.5);
+
+}
+
+
+
+/* 팀 선택 */
+
+h2{
+
+    text-align:center;
+
+}
+
+
+/* 버튼 */
+
+button{
+
+    width:100%;
+
+    height:55px;
+
+    margin:6px 0;
+
+
+    border-radius:14px;
+
+    border:1px solid #555;
+
+
+    background:
+    linear-gradient(#444,#222);
+
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+
+    transition:0.2s;
+
+}
+
+
+button:hover{
+
+    transform:scale(1.02);
+
+}
+
+
+button:active{
+
+    background:#666;
+
+}
+
+
+
+/* 팀 정보 */
+
+#teamInfo{
+
+    margin-top:20px;
+
+    padding:15px;
+
+
+    background:#252525;
+
+
+    border-radius:15px;
+
+
+    text-align:center;
+
+
+    border:1px solid #444;
+
+}
+
+
+
+/* 선수 목록 */
+
+.playerList{
+
+    margin-top:20px;
+
+}
+
+
+
+/* 선수 카드 */
+
+.player{
+
+
+    position:relative;
+
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #333,
+    #1c1c1c
+    );
+
+
+    padding:15px;
+
+
+    margin-bottom:12px;
+
+
+    border-radius:15px;
+
+
+    border-left:6px solid white;
+
+
+    box-shadow:
+
+    0 5px 10px rgba(0,0,0,0.4);
+
+
+}
+
+
+
+/* 선수 이름 */
+
+.player b{
+
+    font-size:20px;
+
+}
+
+
+
+/* 선수 정보 */
+
+.player{
+
+    line-height:1.7;
+
+}
+
+
+
+/* 등급 효과 */
+
+
 .player[data-grade="A"]{
 
-    border-color:#3b82f6;
+    border-left-color:#3498db;
 
 }
 
 
 .player[data-grade="S"]{
 
-    border-color:#22c55e;
+    border-left-color:#2ecc71;
 
 }
 
 
 .player[data-grade="골든글러브"]{
 
-    border-color:#facc15;
+    border-left-color:#ffd700;
 
 }
 
 
 .player[data-grade="시그니처"]{
 
-    border-color:#ef4444;
+    border-left-color:#e74c3c;
 
 }
 
 
 .player[data-grade="레전드"]{
 
-    border-color:#a855f7;
+    border-left-color:#9b59b6;
+
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #3b214f,
+    #1c1c1c
+    );
 
 }
 
 
 
-/* 모바일 최적화 */
+/* 모바일 */
 
 @media(max-width:600px){
+
+    body{
+
+        padding:10px;
+
+    }
 
 
     h1{
 
-        font-size:26px;
+        font-size:25px;
 
     }
 
 
     button{
 
-        font-size:16px;
+        height:50px;
+
+        font-size:15px;
 
     }
 
