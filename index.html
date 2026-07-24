@@ -2,148 +2,6 @@
 <html lang="ko">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>KBO 카드게임</title>
-
-<style>
-
-body{
-    margin:0;
-    padding:20px;
-    background:#111;
-    color:white;
-    font-family:sans-serif;
-    text-align:center;
-}
-
-h1{
-    font-size:30px;
-}
-
-.container{
-    background:#222;
-    padding:20px;
-    border-radius:15px;
-}
-
-button{
-
-    width:90%;
-    height:55px;
-    margin:7px;
-
-    font-size:18px;
-
-    border:none;
-    border-radius:12px;
-
-    background:#444;
-    color:white;
-
-}
-
-button:active{
-
-    background:#777;
-
-}
-
-
-#teamInfo{
-
-    margin-top:20px;
-    padding:15px;
-
-    background:#333;
-
-    border-radius:10px;
-
-}
-
-
-.playerList{
-
-    margin-top:20px;
-    text-align:left;
-
-}
-
-
-.player{
-
-    background:#333;
-
-    margin:8px 0;
-
-    padding:12px;
-
-    border-radius:10px;
-
-}
-
-</style>
-
-</head>
-
-
-<body>
-
-
-<h1>⚾ KBO 카드게임</h1>
-
-
-<div class="container">
-
-
-<h2>팀 선택</h2>
-
-
-<button onclick="selectTeam('LG')">
-LG 트윈스
-</button>
-
-
-<button onclick="selectTeam('SSG')">
-SSG 랜더스
-</button>
-
-
-<button onclick="selectTeam('KIA')">
-KIA 타이거즈
-</button>
-
-
-<button onclick="selectTeam('SAMSUNG')">
-삼성 라이온즈
-</button>
-
-
-<button onclick="selectTeam('KT')">
-KT 위즈
-</button>
-
-
-<button onclick="selectTeam('DOOSAN')">
-두산 베어스
-</button>
-
-
-<button onclick="selectTeam('LOTTE')">
-롯데 자이언츠
-</button>
-
-
-<button onclick="selectTeam('HANWHA')">
-한화 이글스
-</button>
-
-
-<!DOCTYPE html>
-<html lang="ko">
-
-<head>
 
 <meta charset="UTF-8">
 
@@ -165,53 +23,44 @@ KT 위즈
 <div class="container">
 
 
-<h2>구단 선택</h2>
+<h2>내 팀 선택</h2>
 
 
 <button onclick="selectTeam('LG')">
 LG 트윈스
 </button>
 
-
 <button onclick="selectTeam('SSG')">
 SSG 랜더스
 </button>
-
 
 <button onclick="selectTeam('KIA')">
 KIA 타이거즈
 </button>
 
-
 <button onclick="selectTeam('SAMSUNG')">
 삼성 라이온즈
 </button>
-
 
 <button onclick="selectTeam('KT')">
 KT 위즈
 </button>
 
-
 <button onclick="selectTeam('DOOSAN')">
 두산 베어스
 </button>
-
 
 <button onclick="selectTeam('LOTTE')">
 롯데 자이언츠
 </button>
 
-
 <button onclick="selectTeam('HANWHA')">
 한화 이글스
 </button>
 
-
 <button onclick="selectTeam('KIWOOM')">
 키움 히어로즈
 </button>
-
 
 <button onclick="selectTeam('NC')">
 NC 다이노스
@@ -226,84 +75,61 @@ NC 다이노스
 </div>
 
 
-
-<div id="playerList" class="playerList">
-
-</div>
-
+<div id="playerList">
 
 </div>
 
 
+</div>
 
 
-<!-- 데이터 연결 -->
+
+<!-- 데이터 -->
 
 <script src="data/players.js"></script>
+
+
+<!-- 팀 -->
 
 <script src="teams.js"></script>
 
 
+<!-- 카드 -->
 
-<script>
-
-
-function selectTeam(teamId){
+<script src="card.js"></script>
 
 
-    const team = TEAMS[teamId];
+<!-- 시스템 -->
+
+<script src="gacha.js"></script>
+
+<script src="enhance.js"></script>
 
 
-    document.getElementById("teamInfo").innerHTML =
+<script src="system/legend.js"></script>
 
-    `
-    <h2>${team.name}</h2>
-    <p>선수 ${team.players.length}명</p>
-    `;
+<script src="system/shop.js"></script>
 
+<script src="system/save.js"></script>
 
-
-    let html="";
-
-
-    team.players.forEach(player=>{
-
-
-        html +=
-
-        `
-        <div class="player" data-grade="${player.grade}">
-
-
-        <b>${player.name}</b><br>
-
-
-        포지션 : ${player.position}<br>
-
-
-        등급 : ${player.grade}<br>
-
-
-        특성 : ${player.trait}
-
-
-        </div>
-
-        `;
-
-
-    });
+<script src="system/mission.js"></script>
 
 
 
-    document.getElementById("playerList").innerHTML = html;
+<!-- 경기 -->
+
+<script src="game/game.js"></script>
+
+<script src="game/season.js"></script>
+
+<script src="game/ai.js"></script>
 
 
-}
 
+<!-- 화면 -->
 
+<script src="script.js"></script>
 
-</script>
 
 
 </body>
