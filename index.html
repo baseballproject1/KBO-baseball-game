@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KBO 카드게임</title>
+
+<style>
+
+body{
+    margin:0;
+    padding:20px;
+    background:#111;
+    color:white;
+    font-family:sans-serif;
+    text-align:center;
+}
+
+h1{
+    font-size:30px;
+}
+
+.container{
+    background:#222;
+    padding:20px;
+    border-radius:15px;
+}
+
+button{
+
+    width:90%;
+    height:55px;
+    margin:7px;
+
+    font-size:18px;
+
+    border:none;
+    border-radius:12px;
+
+    background:#444;
+    color:white;
+
+}
+
+button:active{
+
+    background:#777;
+
+}
+
+
+#teamInfo{
+
+    margin-top:20px;
+    padding:15px;
+
+    background:#333;
+
+    border-radius:10px;
+
+}
+
+
+.playerList{
+
+    margin-top:20px;
+    text-align:left;
+
+}
+
+
+.player{
+
+    background:#333;
+
+    margin:8px 0;
+
+    padding:12px;
+
+    border-radius:10px;
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<h1>⚾ KBO 카드게임</h1>
+
+
+<div class="container">
+
+
+<h2>팀 선택</h2>
+
+
+<button onclick="selectTeam('LG')">
+LG 트윈스
+</button>
+
+
+<button onclick="selectTeam('SSG')">
+SSG 랜더스
+</button>
+
+
+<button onclick="selectTeam('KIA')">
+KIA 타이거즈
+</button>
+
+
+<button onclick="selectTeam('SAMSUNG')">
+삼성 라이온즈
+</button>
+
+
+<button onclick="selectTeam('KT')">
+KT 위즈
+</button>
+
+
+<button onclick="selectTeam('DOOSAN')">
+두산 베어스
+</button>
+
+
+<button onclick="selectTeam('LOTTE')">
+롯데 자이언츠
+</button>
+
+
+<button onclick="selectTeam('HANWHA')">
+한화 이글스
+</button>
+
+
+<button onclick="selectTeam('KIWOOM')">
+키움 히어로즈
+</button>
+
+
+<button onclick="selectTeam('NC')">
+NC 다이노스
+</button>
+
+
+
+<div id="teamInfo">
+
+팀을 선택하세요
+
+</div>
+
+
+
+<div id="playerList" class="playerList">
+
+</div>
+
+
+
+</div>
+
+
+
+
+<script src="data/players.js"></script>
+
+<script src="teams.js"></script>
+
+
+
+<script>
+
+
+function selectTeam(teamId){
+
+
+    const team = TEAMS[teamId];
+
+
+    document.getElementById("teamInfo").innerHTML =
+
+    `
+    <h2>${team.name}</h2>
+
+    <p>
+    보유 선수 : ${team.players.length}명
+    </p>
+    `;
+
+
+
+    let html="";
+
+
+    team.players.forEach(player=>{
+
+
+        html +=
+
+        `
+        <div class="player">
+
+        <b>${player.name}</b><br>
+
+        포지션 : ${player.position}<br>
+
+        등급 : ${player.grade}<br>
+
+        특성 : ${player.trait}
+
+        </div>
+
+        `;
+
+
+    });
+
+
+
+    document.getElementById("playerList").innerHTML = html;
+
+
+}
+
+
+
+</script>
+
+
+</body>
+
+</html>
